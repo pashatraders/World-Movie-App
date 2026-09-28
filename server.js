@@ -1,13 +1,14 @@
-const userRoutes = require("./user_routes");0
+const userRoutes = require("./user_routes");
 const bcrypt = require("bcryptjs");
-0
-const { getUsers, saveUsers } = require("./users");0
+const { getUsers, saveUsers } = require("./users");
 const express = require("express");
 const session = require("express-session");
 const fs = require("fs");
 const path = require("path");
 
 const app = express();
+app.use(express.static(path.join(__dirname, "public")));
+
 const PORT = 3000;
 
 const ADMIN_EMAIL = "admin@worldmovieapp.local";
@@ -529,7 +530,7 @@ footer{
   <h2>⭐ Choose Your Membership</h2>
 
   <p>
-    Membership plans can be connected to a secure payment provider later.
+    Choose a membership plan to continue.
   </p>
 
   <div class="plans">
@@ -538,14 +539,14 @@ footer{
       <h3>Free</h3>
       <div class="price">Rs. 0</div>
       <p>Explore the platform</p>
-      <button disabled>Current Plan</button>
+      <a class="btn" href="/membership">View Free Plan</a>
     </div>
 
     <div class="plan">
       <h3>Premium</h3>
-      <div class="price">Coming Soon</div>
+      <div class="price">Rs. 1,000 / Month</div>
       <p>Premium features and content access</p>
-      <button disabled>Coming Soon</button>
+      <a class="btn" href="/membership">View Premium Plans</a>
     </div>
 
   </div>
