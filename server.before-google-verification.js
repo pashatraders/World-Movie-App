@@ -705,7 +705,6 @@ app.get("/admin/login", (req, res) => {
 <!DOCTYPE html>
 <html>
 <head>
-<meta name="google-site-verification" content="lfHcPxAGLAjVJcETATlrs-r7lX9gl0KPD92tA292a4c" />
 
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
