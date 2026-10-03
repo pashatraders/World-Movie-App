@@ -138,7 +138,7 @@ h1{text-align:center}
 .plans{display:flex;gap:20px;justify-content:center;flex-wrap:wrap}
 .plan{background:#111722;border:1px solid #29354a;border-radius:14px;padding:25px;width:300px;box-sizing:border-box}
 .price{font-size:30px;font-weight:bold;margin:15px 0}
-button,a.btn{display:block;width:100%;box-sizing:border-box;padding:13px;text-align:center;border:0;border-radius:7px;background:#e50914;color:white;text-decoration:none;font-weight:bold}
+button,a.btn{display:block;width:100%;box-sizing:border-box;padding:13px;text-align:center;border:0;border-radius:7px;background:#e50914;color:white;text-decoration:none;font-weight:bold;cursor:pointer}
 .free{background:#151d2b}
 .note{text-align:center;color:#aaa;margin-top:25px}
 </style>
@@ -162,26 +162,83 @@ ${loggedIn ? "My Profile" : "Create Account"}
 
 <div class="plan">
 <h2>Premium</h2>
+
 <div class="price">Rs. 1,000 / Month</div>
 <p>• Premium membership</p>
 <p>• Premium content access</p>
 <p>• Additional premium features</p>
-<button disabled>Payment Coming Soon</button>
+<button disabled style="opacity:.65;cursor:not-allowed">Payment Coming Soon</button>
 
 <div class="price">Rs. 10,000 / Year</div>
-<button disabled>Payment Coming Soon</button>
+<button disabled style="opacity:.65;cursor:not-allowed">Payment Coming Soon</button>
 </div>
 
 </div>
 
-<p class="note">Secure payment options will be connected after the payment provider is configured.</p>
+<p class="note">Payment will be processed through a configured payment provider. No payment is taken on this page.</p>
 <p style="text-align:center"><a href="/" style="color:#aaa">← Back to Home</a></p>
 </div>
 </body>
 </html>
-`);
-});0
-router.get("/profile", (req, res) => {
+  `);
+});
+
+router.get("/membership/checkout", (req, res) => {
+  if (!req.session.userId) {
+    return res.redirect("/login");
+  }
+
+  const plan = req.query.plan;
+
+  if (plan !== "monthly" && plan !== "yearly") {
+    return res.status(400).send("Invalid membership plan.");
+  }
+
+  const price = plan === "monthly" ? "Rs. 1,000" : "Rs. 10,000";
+  const duration = plan === "monthly" ? "1 Month" : "1 Year";
+
+  res.send(`
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>World Movie App - Checkout</title>
+<style>
+body{margin:0;font-family:Arial;background:#080b12;color:white;padding:20px}
+.box{max-width:500px;margin:50px auto;background:#111722;padding:28px;border-radius:14px;border:1px solid #29354a}
+.card{background:#080b12;padding:18px;border-radius:10px;margin:15px 0}
+.price{font-size:30px;font-weight:bold;margin:10px 0}
+button{width:100%;padding:14px;border:0;border-radius:7px;background:#e50914;color:white;font-weight:bold;font-size:16px}
+.note{color:#aaa;font-size:14px;line-height:1.5}
+a{color:#aaa;text-decoration:none}
+</style>
+</head>
+<body>
+<div class="box">
+<h1>💳 Premium Checkout</h1>
+
+<div class="card">
+<strong>Plan</strong>
+<p>${duration}</p>
+<strong>Price</strong>
+<div class="price">${price}</div>
+</div>
+
+<p class="note">
+Payment provider is not connected yet. This page only confirms the selected plan.
+No payment has been taken.
+</p>
+
+<button disabled>Payment Provider Coming Soon</button>
+
+<p style="margin-top:25px">
+<a href="/membership">← Back to Membership</a>
+</p>
+</div>
+</body>
+</html>
+  `);
+});router.get("/profile", (req, res) => {
   if (!req.session.userId) {
     return res.redirect("/login");
   }

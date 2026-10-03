@@ -249,7 +249,7 @@ app.get("/", (req, res) => {
 
   const movieCount = movies.length;
 
-  res.send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="google-site-verification" content="lfHcPxAGLAjVJcETATlrs-r7lX9gl0KPD92tA292a4c"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>World Movie App</title></head><body><script src="/miko/miko-loader.js" defer></script><div class="wmx-home">
+  res.send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="google-site-verification" content="lfHcPxAGLAjVJcETATlrs-r7lX9gl0KPD92tA292a4c"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>World Movie App | Movies, Trailers & Movie Information</title></head><body><script src="/miko/miko-loader.js" defer></script><div class="wmx-home">
 
 <header class="wmx-top">
   <a class="wmx-brand" href="/">WORLD <span>MOVIE</span> APP</a>

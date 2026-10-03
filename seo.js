@@ -1,6 +1,7 @@
 const fs = require("fs");
 const path = require("path");
 
+
 const SITE_URL = (process.env.SITE_URL || "https://world-movie-app-1.onrender.com").replace(/\/+$/, "");
 
 function loadMovies() {

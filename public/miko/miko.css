@@ -1,0 +1,295 @@
+.miko-button {
+  position: fixed;
+  right: 22px;
+  bottom: 22px;
+  width: 92px;
+  height: 92px;
+  padding: 0;
+  border: 3px solid rgba(255, 210, 31, .95);
+  border-radius: 50%;
+  background:
+    radial-gradient(circle at 35% 25%, #fffbd0 0%, #fff06a 18%, #ffd21f 55%, #b78900 100%);
+  box-shadow:
+    0 0 0 6px rgba(255, 210, 31, .12),
+    0 0 28px rgba(255, 210, 31, .35),
+    0 12px 38px rgba(0, 0, 0, .7);
+  cursor: pointer;
+  z-index: 9999;
+  font-size: 52px;
+  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: visible;
+  transition: transform .2s ease, box-shadow .2s ease;
+  animation: mikoFloat 3s ease-in-out infinite;
+}
+
+.miko-button::before {
+  content: "";
+  position: absolute;
+  inset: -9px;
+  border: 2px solid rgba(255, 210, 31, .25);
+  border-radius: 50%;
+  animation: mikoPulse 2.4s ease-out infinite;
+  pointer-events: none;
+}
+
+.miko-button::after {
+  content: "";
+  position: absolute;
+  width: 13px;
+  height: 13px;
+  right: 4px;
+  top: 5px;
+  border-radius: 50%;
+  background: #ff3344;
+  border: 3px solid #111;
+  box-shadow: 0 0 12px rgba(255, 51, 68, .75);
+  animation: mikoNotification 1.8s ease-in-out infinite;
+}
+
+.miko-button:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 0 0 8px rgba(255, 210, 31, .15),
+    0 0 40px rgba(255, 210, 31, .5),
+    0 15px 44px rgba(0, 0, 0, .75);
+}
+
+.miko-button:active {
+  transform: scale(.96);
+}
+
+@keyframes mikoFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-9px);
+  }
+}
+
+@keyframes mikoPulse {
+  0% {
+    transform: scale(.92);
+    opacity: .8;
+  }
+  70% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1.18);
+    opacity: 0;
+  }
+}
+
+@keyframes mikoNotification {
+  0%, 70%, 100% {
+    transform: scale(1);
+  }
+  80% {
+    transform: scale(1.2);
+  }
+  90% {
+    transform: scale(.9);
+  }
+}
+
+.miko-panel {
+  position: fixed;
+  right: 22px;
+  bottom: 128px;
+  width: min(430px, calc(100vw - 28px));
+  height: min(620px, calc(100vh - 155px));
+  background: rgba(10, 10, 12, .98);
+  color: #fff;
+  border: 1px solid rgba(255, 210, 31, .35);
+  border-radius: 24px;
+  box-shadow:
+    0 24px 80px rgba(0, 0, 0, .82),
+    0 0 45px rgba(255, 210, 31, .12);
+  z-index: 9998;
+  overflow: hidden;
+  display: none;
+  flex-direction: column;
+  font-family: Arial, sans-serif;
+  backdrop-filter: blur(18px);
+}
+
+.miko-panel.open {
+  display: flex;
+  animation: mikoOpen .25s ease-out;
+}
+
+@keyframes mikoOpen {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(.96);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.miko-header {
+  position: relative;
+  padding: 21px 20px 18px;
+  background:
+    radial-gradient(circle at 90% 0%, rgba(255, 210, 31, .22), transparent 38%),
+    linear-gradient(135deg, #1a1a1d, #080808);
+  border-bottom: 1px solid rgba(255, 255, 255, .09);
+}
+
+.miko-header::after {
+  content: "";
+  position: absolute;
+  left: 20px;
+  right: 20px;
+  bottom: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ffd21f, transparent);
+  opacity: .75;
+}
+
+.miko-title {
+  font-size: 25px;
+  font-weight: 800;
+  letter-spacing: .2px;
+}
+
+.miko-subtitle {
+  margin-top: 6px;
+  color: #c4c4c4;
+  font-size: 14px;
+}
+
+.miko-messages {
+  flex: 1;
+  padding: 19px;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
+.miko-messages::-webkit-scrollbar {
+  width: 6px;
+}
+
+.miko-messages::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 10px;
+}
+
+.miko-message {
+  max-width: 88%;
+  padding: 13px 15px;
+  margin-bottom: 13px;
+  border-radius: 17px;
+  line-height: 1.6;
+  font-size: 15px;
+  word-wrap: break-word;
+  white-space: pre-line;
+  box-shadow: 0 5px 18px rgba(0, 0, 0, .2);
+}
+
+.miko-message.bot {
+  background: linear-gradient(135deg, #29292c, #18181a);
+  border: 1px solid rgba(255, 255, 255, .07);
+  margin-right: auto;
+  border-bottom-left-radius: 5px;
+}
+
+.miko-message.user {
+  background: linear-gradient(135deg, #ffe66b, #ffd21f);
+  color: #111;
+  margin-left: auto;
+  border-bottom-right-radius: 5px;
+  font-weight: 600;
+}
+
+.miko-input-area {
+  display: flex;
+  gap: 9px;
+  padding: 15px;
+  background: #09090a;
+  border-top: 1px solid rgba(255, 255, 255, .09);
+}
+
+.miko-input {
+  flex: 1;
+  min-width: 0;
+  border: 1px solid #404044;
+  border-radius: 14px;
+  padding: 13px 14px;
+  background: #18181b;
+  color: #fff;
+  outline: none;
+  font-size: 15px;
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+
+.miko-input::placeholder {
+  color: #858585;
+}
+
+.miko-input:focus {
+  border-color: rgba(255, 210, 31, .75);
+  box-shadow: 0 0 0 3px rgba(255, 210, 31, .09);
+}
+
+.miko-send {
+  border: 0;
+  border-radius: 14px;
+  padding: 0 19px;
+  background: linear-gradient(135deg, #ffe66b, #ffd21f);
+  color: #111;
+  font-weight: 800;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform .15s ease, filter .15s ease;
+}
+
+.miko-send:hover {
+  filter: brightness(1.08);
+  transform: translateY(-1px);
+}
+
+.miko-send:active {
+  transform: translateY(0);
+}
+
+@media (max-width: 520px) {
+  .miko-button {
+    right: 14px;
+    bottom: 14px;
+    width: 82px;
+    height: 82px;
+    font-size: 46px;
+  }
+
+  .miko-panel {
+    right: 10px;
+    bottom: 108px;
+    width: calc(100vw - 20px);
+    height: min(600px, calc(100vh - 130px));
+    border-radius: 20px;
+  }
+
+  .miko-title {
+    font-size: 23px;
+  }
+
+  .miko-message {
+    font-size: 15px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .miko-button,
+  .miko-button::before,
+  .miko-button::after {
+    animation: none;
+  }
+}
