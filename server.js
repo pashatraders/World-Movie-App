@@ -81,9 +81,21 @@ app.get("/", (req, res) => {
   const released = movies.filter(m => (m.status || "Released") !== "Coming Soon");
   const comingSoon = movies.filter(m => (m.status || "") === "Coming Soon");
   const trending = movies.filter(m => m.trending === true || m.trending === "1");
-  const featured = movies.filter(m => m.featured === true || m.featured === "1");
 
-  const latest = [...movies].reverse();
+  const featured = movies.filter(m =>
+    (m.featured === true || m.featured === "1") &&
+    !(m.trending === true || m.trending === "1")
+  );
+
+  const usedHomeIds = new Set([
+    ...trending.map(m => String(m.id)),
+    ...featured.map(m => String(m.id))
+  ]);
+
+  const latest = [...movies]
+    .reverse()
+    .filter(m => !usedHomeIds.has(String(m.id)))
+    .slice(0, 6);
 
   const categories = [
     "All",
