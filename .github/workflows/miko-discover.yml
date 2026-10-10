@@ -1,0 +1,50 @@
+name: Miko Movie Discovery
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "20 3 * * *"
+
+permissions:
+  contents: write
+
+concurrency:
+  group: miko-movie-discovery
+  cancel-in-progress: false
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Restore review queue
+        run: |
+          mkdir -p data
+          if [ -f miko-review-queue.json ]; then
+            cp miko-review-queue.json data/miko-review-queue.json
+          else
+            echo '[]' > data/miko-review-queue.json
+          fi
+
+      - name: Discover movie metadata
+        run: node tools/miko-discover.js
+
+      - name: Save review queue
+        run: |
+          cp data/miko-review-queue.json miko-review-queue.json
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add miko-review-queue.json
+          if ! git diff --cached --quiet; then
+            git commit -m "Update Miko movie review queue"
+            git push
+          else
+            echo "Review queue میں کوئی نئی تبدیلی نہیں۔"
+          fi
