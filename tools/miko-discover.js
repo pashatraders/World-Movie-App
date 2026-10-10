@@ -55,7 +55,7 @@ async function main() {
       Accept: "application/sparql-results+json",
       "User-Agent": "WorldMovieApp-Miko/1.0"
     },
-    signal: AbortSignal.timeout(20000)
+    signal: AbortSignal.timeout(60000)
   });
 
   if (!response.ok) {
