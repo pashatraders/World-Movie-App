@@ -119,5 +119,16 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-10T14:49:01.894Z"
+  },
+  {
+    "title": "Indomitable (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-11T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140473306",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-11T03:39:02.650Z"
   }
 ]
