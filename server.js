@@ -261,7 +261,7 @@ app.get("/", (req, res) => {
 
   const movieCount = movies.length;
 
-  res.send(`<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="google-site-verification" content="lfHcPxAGLAjVJcETATlrs-r7lX9gl0KPD92tA292a4c"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>World Movie App | Movies, Trailers & Movie Information</title></head><body><script src="/miko/miko-loader.js" defer></script><div class="wmx-home">
+  res.send(`<!DOCTYPE html><html lang="en"><head><style id="wmx-desktop-poster-fix">@media (min-width:801px){.wmx-section{padding:32px 7% 12px}.movie-row{display:grid;grid-template-columns:repeat(6,160px);gap:22px;align-items:start}.movie-card{width:160px;min-width:160px}.movie-card .poster{width:160px;height:240px;overflow:hidden;border-radius:10px}.movie-card .poster img{width:100%;height:100%;object-fit:cover;display:block}.movie-info{width:160px}.movie-info h3{font-size:15px;line-height:1.3;margin:8px 0 4px}.movie-info p{font-size:12px;line-height:1.35;margin:0}}</style><meta charset="UTF-8"><meta name="google-site-verification" content="lfHcPxAGLAjVJcETATlrs-r7lX9gl0KPD92tA292a4c"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>World Movie App | Movies, Trailers & Movie Information</title></head><body><script src="/miko/miko-loader.js" defer></script><div class="wmx-home">
 
 <header class="wmx-top">
   <a class="wmx-brand" href="/">WORLD <span>MOVIE</span> APP</a>
@@ -386,6 +386,13 @@ ${row("Coming Soon","Titles marked for future release",comingSoon,"coming-soon",
 .wmx-search span{font-size:28px;color:#777}
 .wmx-search input{width:100%;padding:19px;border:0;outline:0;background:transparent;color:#fff;font-size:16px}
 .wmx-section{padding:48px 7% 15px}
+.movie-row{display:grid;grid-template-columns:repeat(6,160px);gap:22px;align-items:start}
+.movie-card{width:160px;min-width:160px}
+.movie-card .poster{width:160px;height:240px;overflow:hidden;border-radius:10px;position:relative}
+.movie-card .poster img{width:100%;height:100%;object-fit:cover;display:block}
+.movie-info{width:160px}
+.movie-info h3{font-size:15px;line-height:1.3;margin:8px 0 4px}
+.movie-info p{font-size:12px;line-height:1.35;margin:0}
 .wmx-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:22px}
 .wmx-title h2{font-size:30px;margin:7px 0 0}
 .wmx-title a{color:#e50914;text-decoration:none}
@@ -445,7 +452,7 @@ body.wmx-mobile-mode .wmx-top{
   padding:0 14px;
 }
 body.wmx-mobile-mode .wmx-brand{
-  font-size:42px !important;
+  font-size:22px !important;
   line-height:1 !important;
   letter-spacing:-2px !important;
 }
@@ -456,16 +463,16 @@ body.wmx-mobile-mode .wmx-view-switch{
   margin-left:auto;
 }
 body.wmx-mobile-mode .wmx-view-switch button{
-  padding:8px 10px !important;
-  font-size:20px !important;
+  padding:7px 9px !important;
+  font-size:12px !important;
 }
 body.wmx-mobile-mode .wmx-hero{
   min-height:520px;
   padding:55px 22px;
 }
 body.wmx-mobile-mode .wmx-hero h1{
-  font-size:48px;
-  letter-spacing:-3px;
+  font-size:38px !important;
+  letter-spacing:-2px !important;
 }
 body.wmx-mobile-mode .wmx-hero p{
   font-size:15px;
@@ -480,7 +487,7 @@ body.wmx-mobile-mode .wmx-section{
   padding:32px 16px 10px;
 }
 body.wmx-mobile-mode .wmx-title h2{
-  font-size:24px;
+  font-size:22px !important;
 }
 body.wmx-mobile-mode .movie-row{
   display:grid !important;
@@ -518,7 +525,7 @@ body.wmx-mobile-mode .movie-info{
 }
 
 body.wmx-mobile-mode .movie-info h3{
-  font-size:28px !important;
+  font-size:12px !important;
   line-height:1.15 !important;
   margin:3px 0 0 !important;
   white-space:nowrap !important;
@@ -529,7 +536,7 @@ body.wmx-mobile-mode .movie-info h3{
 body.wmx-mobile-mode .movie-info .meta-line,
 body.wmx-mobile-mode .movie-info .genre,
 body.wmx-mobile-mode .movie-info .language{
-  font-size:20px !important;
+  font-size:11px !important;
   line-height:1.15 !important;
   white-space:nowrap !important;
   overflow:hidden !important;
@@ -544,7 +551,7 @@ body.wmx-mobile-mode .wmx-membership{
   padding:25px 20px;
 }
 body.wmx-mobile-mode .wmx-membership h2{
-  font-size:28px;
+  font-size:24px !important;
 }
 body.wmx-mobile-mode .wmx-plans{
   display:grid;
@@ -565,8 +572,8 @@ body.wmx-mobile-mode .wmx-hero{
   padding:70px 22px;
 }
 body.wmx-mobile-mode .wmx-hero h1{
-  font-size:52px;
-  letter-spacing:-3px;
+  font-size:38px !important;
+  letter-spacing:-2px !important;
 }
 body.wmx-mobile-mode .wmx-hero-side{
   display:none;
@@ -2116,7 +2123,31 @@ app.get("/movie/:id", (req, res) => {
         gap:12px;
       }
     }
-  </style>
+
+/* Final responsive overrides */
+@media (max-width:800px) {
+  body.wmx-mobile-mode .wmx-brand {
+    font-size:22px !important;
+    letter-spacing:-1px !important;
+  }
+  body.wmx-mobile-mode .wmx-hero h1 {
+    font-size:clamp(30px,10vw,44px) !important;
+    line-height:1.08 !important;
+    letter-spacing:-1px !important;
+    max-width:100% !important;
+  }
+  body.wmx-mobile-mode .movie-info h3 {
+    font-size:12px !important;
+    line-height:1.2 !important;
+  }
+  body.wmx-mobile-mode .movie-info .meta-line,
+  body.wmx-mobile-mode .movie-info .genre,
+  body.wmx-mobile-mode .movie-info .language {
+    font-size:11px !important;
+    line-height:1.2 !important;
+  }
+}
+</style>
 </head>
 
 <body>

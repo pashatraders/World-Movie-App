@@ -524,15 +524,11 @@ router.post("/admin/miko-review/:index", async (req, res) => {
     movies.push(movie);
     queue.splice(index, 1);
     history.push({ ...item, reviewAction: "PUBLISHED", movieId: movie.id, reviewedAt: now });
-    mikoWrite(mikoMoviesFile, movies);
+
   } else {
     return res.status(400).send("Invalid review decision.");
   }
 
-  fs.mkdirSync(mikoDataDir, { recursive: true });
-  mikoWrite(mikoRootQueue, queue);
-  mikoWrite(path.join(mikoDataDir, "miko-review-queue.json"), queue);
-  mikoWrite(mikoHistoryFile, history);
 
   try {
     const files = {
@@ -542,10 +538,20 @@ router.post("/admin/miko-review/:index", async (req, res) => {
     if (decision === "publish") {
       files["data/movies.json"] = JSON.stringify(movies, null, 2) + "\n";
     }
-    await mikoGitHubCommit(files, "Miko TrustGate: " + decision + " review item");
+    const synced = await mikoGitHubCommit(files, "Miko TrustGate: " + decision + " review item");
+    if (process.env.GITHUB_CONTENTS_TOKEN && synced === false) {
+      throw new Error("GitHub sync did not confirm success.");
+    }
+    if (decision === "publish") {
+      mikoWrite(mikoMoviesFile, movies);
+    }
+    fs.mkdirSync(mikoDataDir, { recursive: true });
+    mikoWrite(mikoRootQueue, queue);
+    mikoWrite(path.join(mikoDataDir, "miko-review-queue.json"), queue);
+    mikoWrite(mikoHistoryFile, history);
     res.redirect("/admin/miko-review");
   } catch (error) {
-    res.status(502).send("Local review saved, but GitHub sync failed: " + mikoEscape(error.message));
+    res.status(502).send("Review could not be fully completed; check GitHub and local files before retrying: " + mikoEscape(error.message));
   }
 });
 
