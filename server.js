@@ -2147,6 +2147,95 @@ app.get("/movie/:id", (req, res) => {
     line-height:1.2 !important;
   }
 }
+
+/* WORLD_MOVIE_APP_MODERN_PURPLE_THEME_V1 */
+:root {
+  --wmx-bg: #090810;
+  --wmx-panel: #151321;
+  --wmx-panel-hover: #211b32;
+  --wmx-purple: #9b5cff;
+  --wmx-purple-bright: #b58aff;
+  --wmx-text: #f7f4ff;
+  --wmx-muted: #b8b2c8;
+  --wmx-border: rgba(181, 138, 255, .22);
+}
+html { scroll-behavior: smooth; }
+body {
+  background-color: var(--wmx-bg);
+  color: var(--wmx-text);
+}
+header, nav, .navbar, .site-header {
+  border-color: var(--wmx-border);
+}
+a { transition: color .2s ease; }
+a:hover { color: var(--wmx-purple-bright); }
+button, .btn, a.button, input[type="submit"] {
+  transition: background .2s ease, border-color .2s ease,
+              transform .2s ease, box-shadow .2s ease;
+}
+button:hover, .btn:hover, a.button:hover, input[type="submit"]:hover {
+  box-shadow: 0 5px 22px rgba(155, 92, 255, .22);
+}
+.wmx-section {
+  margin-bottom: 30px;
+}
+.wmx-section h2,
+.wmx-section h3,
+.section-title {
+  letter-spacing: .01em;
+}
+.movie-card, .movie-item, .wmx-card {
+  background: var(--wmx-panel);
+  border: 1px solid var(--wmx-border);
+  border-radius: 14px;
+  overflow: hidden;
+  transition: transform .22s ease, border-color .22s ease,
+              box-shadow .22s ease;
+}
+.movie-card:hover, .movie-item:hover, .wmx-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(181, 138, 255, .7);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, .28);
+}
+.movie-card img, .movie-item img, .movie-poster {
+  display: block;
+  max-width: 100%;
+  object-fit: cover;
+}
+.category-pill, .pill, .genre-pill, .filter-pill {
+  border: 1px solid var(--wmx-border);
+  border-radius: 999px;
+  transition: background .2s ease, border-color .2s ease;
+}
+.category-pill:hover, .pill:hover, .genre-pill:hover, .filter-pill:hover {
+  background: rgba(155, 92, 255, .17);
+  border-color: var(--wmx-purple);
+}
+.hero, .hero-banner {
+  border-color: var(--wmx-border);
+}
+.brand, .logo, .site-logo {
+  color: var(--wmx-text);
+}
+:focus-visible {
+  outline: 2px solid var(--wmx-purple-bright);
+  outline-offset: 3px;
+}
+@media (min-width: 900px) {
+  .wmx-section { margin-bottom: 38px; }
+  .movie-card:hover, .movie-item:hover, .wmx-card:hover {
+    transform: translateY(-5px);
+  }
+}
+@media (max-width: 600px) {
+  .wmx-section { margin-bottom: 24px; }
+  .movie-card, .movie-item, .wmx-card { border-radius: 11px; }
+  button, .btn, a.button, input[type="submit"] {
+    max-width: 100%;
+  }
+  img { max-width: 100%; }
+}
+
 </style>
 </head>
 
