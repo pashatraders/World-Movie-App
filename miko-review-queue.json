@@ -141,5 +141,49 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-12T03:43:13.155Z"
+  },
+  {
+    "title": "Bunker Heights (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-13T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q124128618",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-13T03:42:01.338Z"
+  },
+  {
+    "title": "The Beast (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-09T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q131187454",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-13T03:42:01.338Z"
+  },
+  {
+    "title": "Double Trouble (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-09T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q133874352",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-13T03:42:01.338Z"
+  },
+  {
+    "title": "Your Mother Your Mother Your Mother (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-09T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q133286528",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-13T03:42:01.338Z"
   }
 ]
