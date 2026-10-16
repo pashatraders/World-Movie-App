@@ -317,5 +317,93 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-15T03:54:48.875Z"
+  },
+  {
+    "title": "Musk (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q117253374",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-16T03:54:50.175Z"
+  },
+  {
+    "title": "La bola negra (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q134548431",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-16T03:54:50.175Z"
+  },
+  {
+    "title": "Caro mondo crudele (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q134550748",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-16T03:54:50.175Z"
+  },
+  {
+    "title": "The Harvester (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q133830798",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-16T03:54:50.175Z"
+  },
+  {
+    "title": "The Only Living Pickpocket In New York (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q134114136",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-16T03:54:50.175Z"
+  },
+  {
+    "title": "Emperor vs Sarat Chandra (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q138307614",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-16T03:54:50.175Z"
+  },
+  {
+    "title": "Fjord (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137652478",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-16T03:54:50.175Z"
+  },
+  {
+    "title": "Woman Who Sold Her Shadow (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141665653",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-16T03:54:50.175Z"
   }
 ]
