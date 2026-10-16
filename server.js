@@ -3505,6 +3505,74 @@ body {
   `);
 });
 
+
+// WMA_INFO_PAGES_V1
+function wmaRenderInfoPage(title, content) {
+  return `<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>${title} | World Movie App</title>
+<meta name="description" content="${title} - World Movie App information.">
+<style>
+body{margin:0;background:#090711;color:#f8f5ff;font:16px/1.7 Arial,sans-serif}
+main{max-width:850px;margin:40px auto;padding:24px}
+h1,h2{color:#bc93ff}a{color:#bc93ff}
+article{background:#131020;border:1px solid #302544;border-radius:16px;padding:24px}
+nav{margin-bottom:24px}nav a{margin-right:14px}
+</style>
+</head>
+<body><main>
+<nav><a href="/">Home</a><a href="/movies">Movies</a><a href="/about">About</a><a href="/contact">Contact</a></nav>
+<article><h1>${title}</h1>${content}</article>
+<footer><p>© World Movie App</p><a href="/privacy">Privacy Policy</a> · <a href="/terms">Terms</a></footer>
+</main></body></html>`;
+}
+
+app.get("/about", (req, res) => {
+  res.send(wmaRenderInfoPage("About Us", `
+    <p>World Movie App helps visitors discover movie information, trailers, and viewing-source links.</p>
+    <p>We aim to identify authorized and public-domain material where applicable. Availability and rights can vary by title and location. We do not claim ownership of third-party material unless explicitly stated.</p>
+    <p>If you believe content or a link raises a rights concern, please contact us.</p>
+  `));
+});
+
+app.get("/contact", (req, res) => {
+  res.send(wmaRenderInfoPage("Contact Us", `
+    <p>For questions, corrections, or copyright concerns, email:</p>
+    <p><a href="mailto:Worldmovieapp1@gmail.com">Worldmovieapp1@gmail.com</a></p>
+    <p>Please include the relevant movie title or page URL when reporting a problem.</p>
+  `));
+});
+
+app.get("/privacy", (req, res) => {
+  res.send(wmaRenderInfoPage("Privacy Policy", `
+    <p>This page explains general privacy practices for World Movie App.</p>
+    <h2>Information and technical data</h2>
+    <p>If you create an account or use account features, information you submit may be processed to provide those features. The hosting service may also process technical logs such as request details for security and operation.</p>
+    <h2>Cookies and sessions</h2>
+    <p>The website may use cookies or similar session technologies for essential functionality, such as keeping a user signed in.</p>
+    <h2>Third-party links</h2>
+    <p>Movie links and other external services are operated by third parties. Their privacy practices are governed by their own policies.</p>
+    <h2>Choices and questions</h2>
+    <p>For privacy-related questions or requests, contact <a href="mailto:Worldmovieapp1@gmail.com">Worldmovieapp1@gmail.com</a>.</p>
+    <p>This policy should be updated if the website adds advertising, analytics, or other services that change how information is processed.</p>
+  `));
+});
+
+app.get("/terms", (req, res) => {
+  res.send(wmaRenderInfoPage("Terms of Use", `
+    <p>By using World Movie App, you agree to use the website lawfully and not to disrupt its operation.</p>
+    <h2>Information and external links</h2>
+    <p>Movie details and links are provided for discovery and informational purposes. External websites are controlled by their respective operators; check their terms and rights before using their content.</p>
+    <h2>Rights concerns</h2>
+    <p>We do not intend to present third-party material as our own. Please report suspected errors or rights concerns to <a href="mailto:Worldmovieapp1@gmail.com">Worldmovieapp1@gmail.com</a>.</p>
+    <h2>Changes</h2>
+    <p>Website features and these terms may change as the service develops. These terms are not legal advice and should be reviewed for the laws that apply to the service.</p>
+  `));
+});
+
 app.listen(PORT, "0.0.0.0", () => {
 
   console.log(
@@ -3515,3 +3583,4 @@ app.listen(PORT, "0.0.0.0", () => {
 
 
 <!-- MOVIE CARD LINK SAFE -->
+
