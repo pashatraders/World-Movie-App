@@ -292,10 +292,22 @@ app.get("/", (req, res) => {
     </div>
   </div>
   <div class="wmx-hero-side">
+    <div class="wmx-cinema-art" aria-label="World Movie App featured artwork">
+      <div class="wmx-art-orbit wmx-art-orbit-one"></div>
+      <div class="wmx-art-orbit wmx-art-orbit-two"></div>
+      <div class="wmx-art-poster">
+        <span class="wmx-art-eyebrow">WORLD MOVIE APP</span>
+        <div class="wmx-art-symbol">✦</div>
+        <b>EVERY STORY<br>OPENS A<br>NEW WORLD</b>
+        <small>YOUR NEXT FAVORITE AWAITS</small>
+      </div>
+      <div class="wmx-art-chip">✦ DISCOVER YOUR NEXT FILM</div>
+      <div class="wmx-art-index">WMA <span>•</span> 001</div>
+    </div>
     <div class="wmx-glass">
-      <span>NOW DISCOVERING</span>
-      <b>Movies • Series • Classics</b>
-      <small>English · Pakistani · Indian · Punjabi · Korean · Turkish & more</small>
+      <span>YOUR WORLD OF ENTERTAINMENT</span>
+      <b>Movies. Series. Classics.</b>
+      <small>Explore English, Pakistani, Indian, Punjabi, Korean and Turkish entertainment through authorized sources.</small>
     </div>
   </div>
 </section>
@@ -1373,7 +1385,231 @@ body {
 @media(max-width:800px) {
   .wmx-top {padding:0 5%;height:66px}
   .wmx-hero {
-    display:block!important;min-height:0;padding:72px 6% 55px;
+    display:block!importan
+/* WORLD MOVIE APP CINEMATIC STRUCTURE REDESIGN V1 */
+.wmx-home {
+  overflow: hidden;
+  background:
+    radial-gradient(ellipse at 78% 13%, rgba(112,63,190,.18), transparent 34%),
+    #08070d !important;
+}
+.wmx-home .wmx-hero {
+  position: relative;
+  isolation: isolate;
+  display: grid;
+  grid-template-columns: minmax(0,1.08fr) minmax(280px,.92fr);
+  align-items: center;
+  gap: clamp(22px,4vw,64px);
+  min-height: 490px;
+  padding: clamp(32px,6vw,78px) clamp(18px,5vw,70px);
+  border: 1px solid rgba(255,255,255,.09);
+  border-radius: 26px;
+  background:
+    radial-gradient(ellipse at 76% 46%, rgba(117,65,196,.24), transparent 38%),
+    linear-gradient(120deg,#100d19 0%,#0a0911 65%,#151020 100%);
+  overflow: hidden;
+}
+.wmx-home .wmx-hero-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  opacity: .42;
+  background: radial-gradient(ellipse at 20% 15%,rgba(142,91,235,.18),transparent 50%);
+}
+.wmx-home .wmx-hero-content { position:relative; z-index:2; max-width:650px; }
+.wmx-home .wmx-hero-content h1 {
+  font-size:clamp(2.6rem,6vw,5.4rem);
+  line-height:.98;
+  letter-spacing:-.055em;
+  margin:18px 0;
+  text-wrap:balance;
+}
+.wmx-home .wmx-hero-content h1 strong {
+  color:#b18aff;
+  text-shadow:0 0 36px rgba(150,85,245,.24);
+}
+.wmx-home .wmx-hero-content p {
+  max-width:510px;
+  color:#c2bdcf;
+  font-size:clamp(.95rem,1.4vw,1.1rem);
+  line-height:1.8;
+}
+.wmx-home .wmx-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:25px; }
+.wmx-home .wmx-primary,
+.wmx-home .wmx-secondary {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  min-height:46px;
+  padding:12px 20px;
+  border-radius:12px;
+  text-decoration:none;
+  font-weight:750;
+  transition:transform .2s ease,background .2s ease;
+}
+.wmx-home .wmx-primary {
+  color:#fff !important;
+  background:linear-gradient(135deg,#9d63f5,#7140ce) !important;
+  box-shadow:0 9px 28px rgba(122,67,214,.25);
+}
+.wmx-home .wmx-secondary {
+  color:#f4efff !important;
+  border:1px solid rgba(255,255,255,.17);
+  background:rgba(255,255,255,.045);
+}
+.wmx-home .wmx-primary:hover,
+.wmx-home .wmx-secondary:hover { transform:translateY(-2px); }
+.wmx-home .wmx-hero-side {
+  position:relative;
+  z-index:1;
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  gap:18px;
+  min-width:0;
+}
+.wmx-home .wmx-cinema-art {
+  position:relative;
+  display:grid;
+  place-items:center;
+  width:min(100%,390px);
+  min-height:350px;
+  aspect-ratio:1 / 1.03;
+  overflow:hidden;
+  border:1px solid rgba(210,184,255,.23);
+  border-radius:26px;
+  background:
+    radial-gradient(ellipse at 50% 43%,rgba(143,91,226,.37),transparent 43%),
+    linear-gradient(145deg,#211438,#100d1d 55%,#08070e);
+  box-shadow:0 30px 90px rgba(0,0,0,.38),inset 0 0 50px rgba(171,122,255,.06);
+}
+.wmx-home .wmx-art-orbit {
+  position:absolute;
+  width:82%;
+  aspect-ratio:1;
+  border:1px solid rgba(190,153,255,.2);
+  border-radius:50%;
+  transform:rotate(-24deg) scaleY(.66);
+}
+.wmx-home .wmx-art-orbit-one { width:95%; }
+.wmx-home .wmx-art-orbit-two { width:70%; border-color:rgba(255,255,255,.13); transform:rotate(35deg) scaleY(.72); }
+.wmx-home .wmx-art-poster {
+  position:relative;
+  z-index:2;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  width:64%;
+  min-height:270px;
+  padding:24px 20px;
+  border:1px solid rgba(255,255,255,.23);
+  border-radius:7px;
+  color:#fff;
+  background:
+    linear-gradient(160deg,rgba(155,105,235,.18),transparent 42%),
+    linear-gradient(145deg,#241738,#100d18 72%);
+  box-shadow:0 20px 45px rgba(0,0,0,.55),inset 0 0 35px rgba(177,138,255,.08);
+  transform:rotate(-3deg);
+}
+.wmx-home .wmx-art-eyebrow { color:#d2baff; font-size:9px; font-weight:800; letter-spacing:.22em; }
+.wmx-home .wmx-art-symbol {
+  margin:14px 0 10px;
+  color:#c4a0ff;
+  font-size:48px;
+  line-height:1;
+  text-shadow:0 0 28px rgba(174,126,255,.65);
+}
+.wmx-home .wmx-art-poster b {
+  font-size:clamp(1.1rem,2.5vw,1.75rem);
+  line-height:1.04;
+  letter-spacing:-.045em;
+}
+.wmx-home .wmx-art-poster small {
+  margin-top:17px;
+  color:#c8bfd8;
+  font-size:8px;
+  letter-spacing:.12em;
+}
+.wmx-home .wmx-art-chip {
+  position:absolute;
+  z-index:3;
+  right:5%;
+  bottom:13%;
+  padding:10px 12px;
+  border:1px solid rgba(255,255,255,.17);
+  border-radius:10px;
+  color:#f4eaff;
+  background:rgba(23,17,35,.88);
+  font-size:9px;
+  font-weight:800;
+  letter-spacing:.06em;
+  box-shadow:0 8px 24px rgba(0,0,0,.3);
+}
+.wmx-home .wmx-art-index {
+  position:absolute;
+  top:20px;
+  right:20px;
+  color:#c8b8e4;
+  font-size:10px;
+  letter-spacing:.14em;
+}
+.wmx-home .wmx-art-index span { color:#a77af2; }
+.wmx-home .wmx-glass {
+  width:min(100%,390px);
+  padding:16px 18px;
+  border:1px solid rgba(255,255,255,.11);
+  border-radius:15px;
+  background:rgba(22,18,32,.75);
+  backdrop-filter:blur(12px);
+}
+.wmx-home .wmx-glass span {
+  display:block;
+  margin-bottom:7px;
+  color:#b99aff;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.13em;
+}
+.wmx-home .wmx-glass b { display:block; color:#fff; font-size:16px; }
+.wmx-home .wmx-glass small { display:block; margin-top:7px; color:#bdb5cc; line-height:1.6; }
+.wmx-home .wmx-search {
+  border:1px solid rgba(255,255,255,.1);
+  border-radius:16px;
+  background:#12101a;
+}
+.wmx-home .wmx-home-section,
+.wmx-home section[id="categories"] { margin-top:32px; }
+.wmx-home .wmx-home-section h2,
+.wmx-home section[id="categories"] h2 {
+  letter-spacing:-.025em;
+}
+.wmx-home .wmx-movie-row,
+.wmx-home .wmx-row,
+.wmx-home .wmx-cards {
+  scrollbar-width:thin;
+  scrollbar-color:#574174 transparent;
+}
+@media (max-width:760px) {
+  .wmx-home .wmx-hero {
+    grid-template-columns:minmax(0,1fr);
+    gap:28px;
+    min-height:0;
+    padding:30px 18px 24px;
+    border-radius:20px;
+  }
+  .wmx-home .wmx-hero-content h1 { font-size:clamp(2.65rem,12vw,4rem); }
+  .wmx-home .wmx-hero-side { width:100%; }
+  .wmx-home .wmx-cinema-art { width:min(100%,340px); min-height:300px; }
+  .wmx-home .wmx-art-poster { min-height:245px; }
+  .wmx-home .wmx-glass { width:100%; }
+}
+@media (prefers-reduced-motion:reduce) {
+  .wmx-home .wmx-primary,
+  .wmx-home .wmx-secondary { transition:none; }
+}
+/* END WORLD MOVIE APP CINEMATIC STRUCTURE REDESIGN V1 */
+
+t;min-height:0;padding:72px 6% 55px;
   }
   .wmx-hero-content {max-width:100%}
   .wmx-hero h1 {font-size:clamp(43px,12vw,60px);letter-spacing:-2px}
