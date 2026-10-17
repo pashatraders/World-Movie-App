@@ -1626,6 +1626,76 @@ t;min-height:0;padding:72px 6% 55px;
   .wmx-plans div {min-width:120px;flex:1}
 }
 
+
+
+/* WORLD MOVIE APP FINAL LAYOUT OVERRIDE V2 */
+.wmx-home .wmx-hero {
+  display:grid!important;
+  grid-template-columns:minmax(0,1.08fr) minmax(260px,.92fr)!important;
+  align-items:center!important;
+  gap:clamp(22px,4vw,56px)!important;
+  min-height:0!important;
+  padding:clamp(30px,5vw,68px)!important;
+  border-radius:24px!important;
+}
+.wmx-home .wmx-hero-content {position:relative!important;max-width:720px!important;min-width:0!important}
+.wmx-home .wmx-hero-side {
+  display:flex!important;
+  position:relative!important;
+  inset:auto!important;
+  width:100%!important;
+  min-width:0!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  gap:18px!important;
+}
+.wmx-home .wmx-cinema-art {
+  display:grid!important;
+  position:relative!important;
+  width:min(100%,390px)!important;
+  min-height:350px!important;
+  aspect-ratio:1/1.03!important;
+  overflow:hidden!important;
+  border-radius:24px!important;
+}
+.wmx-home .wmx-art-poster {display:flex!important}
+.wmx-home .wmx-glass {display:block!important;width:min(100%,390px)!important}
+.wmx-home .wmx-search-wrap {padding-left:clamp(16px,7%,80px)!important;padding-right:clamp(16px,7%,80px)!important}
+.wmx-home .wmx-categories {gap:10px!important}
+.wmx-home .wmx-cat {border-radius:999px!important}
+.wmx-home .movie-row {gap:18px!important}
+@media(max-width:760px) {
+  .wmx-home .wmx-hero {
+    grid-template-columns:minmax(0,1fr)!important;
+    gap:28px!important;
+    padding:28px 18px!important;
+    min-height:0!important;
+  }
+  .wmx-home .wmx-hero-content h1 {
+    font-size:clamp(42px,11vw,64px)!important;
+    line-height:.98!important;
+    letter-spacing:-2px!important;
+  }
+  .wmx-home .wmx-hero-side {display:flex!important;width:100%!important}
+  .wmx-home .wmx-cinema-art {width:min(100%,340px)!important;min-height:300px!important}
+  .wmx-home .wmx-art-poster {min-height:245px!important}
+  .wmx-home .wmx-glass {width:100%!important}
+  .wmx-home .wmx-section {padding:30px 18px 12px!important}
+  .wmx-home .movie-row {
+    display:flex!important;
+    overflow-x:auto!important;
+    padding-bottom:14px!important;
+    scroll-snap-type:x proximity;
+  }
+  .wmx-home .movie-card {flex:0 0 140px!important;width:140px!important;min-width:140px!important;scroll-snap-align:start}
+  .wmx-home .movie-card .poster {width:140px!important;height:210px!important}
+  .wmx-home .movie-info {width:140px!important}
+  .wmx-home .wmx-membership {margin:32px 18px!important;padding:24px!important}
+}
+@media(min-width:761px) {
+  .wmx-home .wmx-hero-side {display:flex!important}
+}
+
 </style>
 
 
