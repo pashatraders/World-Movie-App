@@ -1614,7 +1614,7 @@ t;min-height:0;padding:72px 6% 55px;
   .wmx-hero-content {max-width:100%}
   .wmx-hero h1 {font-size:clamp(43px,12vw,60px);letter-spacing:-2px}
   .wmx-hero p {font-size:15px}
-  .wmx-hero-side {display:none!important}
+  .wmx-hero-side {display:flex!important;position:relative!important;right:auto!important;bottom:auto!important;width:100%!important}
   .wmx-search-wrap {padding:22px 6%!important}
   .wmx-section {padding:30px 6% 12px!important}
   .movie-row {gap:13px!important}
