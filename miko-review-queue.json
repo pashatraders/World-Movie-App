@@ -405,5 +405,27 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-16T03:54:50.175Z"
+  },
+  {
+    "title": "Fatherland (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q135825188",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-17T03:52:50.166Z"
+  },
+  {
+    "title": "Street Fighter (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-16T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q130345436",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-17T03:52:50.166Z"
   }
 ]
