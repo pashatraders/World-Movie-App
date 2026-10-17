@@ -1225,6 +1225,171 @@ body {
 }
 
 
+
+
+
+/* WORLD_MOVIE_APP_HOME_THEME_FINAL_V1 */
+.wmx-home .wmx-brand span,
+.wmx-home .wmx-kicker,
+.wmx-home .wmx-hero h1 strong,
+.wmx-home .wmx-glass span,
+.wmx-home .wmx-membership small,
+.wmx-home .wmx-title small,
+.wmx-home .wmx-title a {
+  color: #bc93ff !important;
+}
+.wmx-home .wmx-primary,
+.wmx-home .wmx-view-switch button.active {
+  background: #9655f5 !important;
+  color: #fff !important;
+}
+.wmx-home .wmx-cat:hover,
+.wmx-home .wmx-genres a:hover {
+  background: #9655f5 !important;
+  border-color: #9655f5 !important;
+}
+.wmx-home .wmx-hero-bg {
+  background:
+    radial-gradient(ellipse at 78% 30%, rgba(150,85,245,.22), transparent 35%),
+    radial-gradient(ellipse at 90% 90%, rgba(80,43,150,.2), transparent 35%) !important;
+}
+
+/* WORLD MOVIE APP FULL LAYOUT REDESIGN */
+.wmx-home {
+  --wmx-bg:#090711;
+  --wmx-surface:#151124;
+  --wmx-purple:#9655f5;
+  --wmx-purple-light:#bc93ff;
+  background:var(--wmx-bg)!important;
+  color:#f8f5ff;
+  font-family:Arial,sans-serif;
+}
+.wmx-top {
+  position:sticky;top:0;z-index:100;
+  height:76px;padding:0 6%;
+  background:rgba(9,7,17,.92)!important;
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid #29203d;
+}
+.wmx-brand span,.wmx-kicker,.wmx-hero h1 strong,
+.wmx-glass span,.wmx-membership small,.wmx-title small {
+  color:var(--wmx-purple-light)!important;
+}
+.wmx-top nav a {transition:color .2s}
+.wmx-top nav a:hover,.wmx-title a {color:var(--wmx-purple-light)!important}
+.wmx-hero {
+  display:grid!important;
+  grid-template-columns:minmax(0,1.2fr) minmax(250px,.8fr);
+  align-items:center;gap:35px;
+  min-height:570px;padding:65px 7%;
+  background:
+    radial-gradient(ellipse at 78% 40%,rgba(126,65,220,.24),transparent 42%),
+    linear-gradient(120deg,#090711,#151027 70%,#0b0914)!important;
+}
+.wmx-hero-bg {
+  background:
+    radial-gradient(ellipse at 78% 30%,rgba(150,85,245,.22),transparent 35%),
+    radial-gradient(ellipse at 90% 90%,rgba(80,43,150,.2),transparent 35%)!important;
+}
+.wmx-hero-content {max-width:680px}
+.wmx-kicker {letter-spacing:4px}
+.wmx-hero h1 {
+  font-size:clamp(44px,6vw,82px);
+  line-height:.98;letter-spacing:-3px;
+}
+.wmx-hero p {color:#c0b9d0;max-width:520px}
+.wmx-hero-side {
+  position:relative!important;right:auto!important;bottom:auto!important;
+  width:auto!important;align-self:center;
+}
+.wmx-glass {
+  min-height:230px;padding:32px;
+  display:flex;flex-direction:column;justify-content:flex-end;
+  border:1px solid #44305f!important;border-radius:22px!important;
+  background:
+    radial-gradient(ellipse at 80% 20%,rgba(150,85,245,.32),transparent 50%),
+    linear-gradient(145deg,#211733,#100d1b 75%)!important;
+  box-shadow:0 24px 70px rgba(0,0,0,.4)!important;
+}
+.wmx-glass b {font-size:25px}
+.wmx-search-wrap {
+  padding:28px 7%!important;background:#0c0915!important;
+}
+.wmx-search {
+  max-width:900px;border-radius:15px!important;
+  background:#171226!important;border:1px solid #38274f!important;
+}
+.wmx-search input {padding:20px}
+.wmx-categories,.wmx-genres {gap:12px}
+.wmx-cat,.wmx-genres a {
+  border-radius:999px!important;
+  background:#171226!important;border:1px solid #342447!important;
+  transition:all .2s;
+}
+.wmx-cat:hover,.wmx-genres a:hover {
+  background:var(--wmx-purple)!important;
+  border-color:var(--wmx-purple)!important;
+}
+.wmx-section {padding:36px 7% 18px!important}
+.wmx-title {margin-bottom:24px}
+.wmx-title h2 {letter-spacing:-.6px}
+.movie-row {
+  display:flex!important;gap:18px!important;
+  overflow-x:auto!important;overflow-y:hidden;
+  padding:4px 2px 22px;scrollbar-width:thin;
+  scrollbar-color:#68429c #171124;
+}
+.movie-card {
+  flex:0 0 160px;width:160px!important;min-width:160px!important;
+  border-radius:12px;transition:transform .22s;
+}
+.movie-card:hover {transform:translateY(-5px)}
+.movie-card .poster {
+  width:100%!important;height:240px!important;
+  border-radius:12px!important;background:#191326;
+  border:1px solid #2b203c;
+}
+.movie-card .poster img {object-fit:cover}
+.movie-card .poster-overlay {
+  background:linear-gradient(transparent,rgba(10,6,18,.95));
+}
+.movie-card .poster-overlay a {
+  background:var(--wmx-purple)!important;color:white!important;
+  border-radius:8px;
+}
+.movie-info {width:100%!important}
+.movie-info h3 {color:#f8f5ff}
+.movie-info .category,.movie-info .genre {color:#bca0ef}
+.wmx-membership {
+  border:1px solid #3a2854!important;border-radius:22px!important;
+  background:radial-gradient(ellipse at 100% 0%,#2b1945,#100d19 65%)!important;
+}
+.wmx-plans div {
+  border-color:#3b2a52!important;border-radius:14px!important;
+  background:#120e1e!important;
+}
+.wmx-plans strong {color:#d6bdff}
+.wmx-footer {border-color:#2b203c!important}
+@media(max-width:800px) {
+  .wmx-top {padding:0 5%;height:66px}
+  .wmx-hero {
+    display:block!important;min-height:0;padding:72px 6% 55px;
+  }
+  .wmx-hero-content {max-width:100%}
+  .wmx-hero h1 {font-size:clamp(43px,12vw,60px);letter-spacing:-2px}
+  .wmx-hero p {font-size:15px}
+  .wmx-hero-side {display:none!important}
+  .wmx-search-wrap {padding:22px 6%!important}
+  .wmx-section {padding:30px 6% 12px!important}
+  .movie-row {gap:13px!important}
+  .movie-card {flex-basis:132px;width:132px!important;min-width:132px!important}
+  .movie-card .poster {height:198px!important}
+  .wmx-title h2 {font-size:24px}
+  .wmx-membership {margin:38px 6%;padding:25px!important}
+  .wmx-plans {gap:10px}
+  .wmx-plans div {min-width:120px;flex:1}
+}
+
 </style>
 
 
