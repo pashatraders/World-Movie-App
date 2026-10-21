@@ -438,5 +438,71 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-19T03:58:16.835Z"
+  },
+  {
+    "title": "Parallel Tales (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q134184074",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-21T03:56:04.722Z"
+  },
+  {
+    "title": "Karma (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q132735420",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-21T03:56:04.722Z"
+  },
+  {
+    "title": "Al Baraneya (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141532062",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-21T03:56:04.722Z"
+  },
+  {
+    "title": "La Gradiva (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139374374",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-21T03:56:04.722Z"
+  },
+  {
+    "title": "Nowhere to Lay My Eyes (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140473557",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-21T03:56:04.722Z"
+  },
+  {
+    "title": "Paradise Lost (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140936452",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-21T03:56:04.722Z"
   }
 ]
