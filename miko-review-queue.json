@@ -504,5 +504,82 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-21T03:56:04.722Z"
+  },
+  {
+    "title": "De Gaulle: Tilting Iron (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q120640544",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-22T03:57:06.505Z"
+  },
+  {
+    "title": "Lady Nazca (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q135474677",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-22T03:57:06.505Z"
+  },
+  {
+    "title": "Quir (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136885236",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-22T03:57:06.505Z"
+  },
+  {
+    "title": "Blue Fiddle (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q131653966",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-22T03:57:06.505Z"
+  },
+  {
+    "title": "Dances with Weights (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140557432",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-22T03:57:06.505Z"
+  },
+  {
+    "title": "Materia Prima (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140884585",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-22T03:57:06.505Z"
+  },
+  {
+    "title": "The Other Side (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140466176",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-22T03:57:06.505Z"
   }
 ]
