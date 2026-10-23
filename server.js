@@ -445,6 +445,32 @@ app.get("/", (req, res) => {
 }
 </style>
 
+<style id="WMX_PURPLE_FINAL_V3">
+.wmx-home .wmx-brand span,
+.wmx-home .wmx-kicker,
+.wmx-home .wmx-hero h1 strong,
+.wmx-home .wmx-glass span,
+.wmx-home .wmx-membership small,
+.wmx-home .wmx-title small,
+.wmx-home .wmx-title a {
+  color: var(--wmx-purple-light, #bc93ff) !important;
+}
+.wmx-home .wmx-primary,
+.wmx-home .wmx-cat:hover,
+.wmx-home .wmx-genres a:hover,
+.wmx-home .wmx-view-switch button.active,
+.wmx-home .wmx-switch button.active {
+  background-color: var(--wmx-purple, #9655f5) !important;
+  border-color: var(--wmx-purple, #9655f5) !important;
+}
+.wmx-home .wmx-primary {
+  box-shadow: 0 8px 28px rgba(150,85,245,.28) !important;
+}
+.wmx-home .wmx-primary:hover {
+  background-color: var(--wmx-purple-light, #bc93ff) !important;
+}
+</style>
+
 </head><body><script src="/miko/miko-loader.js" defer></script><div class="wmx-home">
 
 <header class="wmx-top">
