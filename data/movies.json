@@ -2,7 +2,7 @@
   {
     "title": "The Great Train Robbery (1903)",
     "description": "Classic American silent Western film directed by Edwin S. Porter. Public Domain according to the Wikimedia Commons source page.",
-    "posterUrl": "/posters/great_train_robbery.jpg",
+    "posterUrl": "/posters/great_train_robbery.svg",
     "trailerUrl": "https://commons.wikimedia.org/wiki/File:The_Great_Train_Robbery_(1903).webm",
     "watchUrl": "https://commons.wikimedia.org/wiki/File:The_Great_Train_Robbery_(1903).webm",
     "id": "movie-1903-great-train-robbery",
@@ -21,7 +21,7 @@
   {
     "title": "The Squaw Man (1914)",
     "description": "American silent Western drama directed by Cecil B. DeMille and Oscar C. Apfel. Public Domain according to the Wikimedia Commons source page.",
-    "posterUrl": "/posters/squaw_man.jpg",
+    "posterUrl": "/posters/squaw_man.svg",
     "trailerUrl": "https://commons.wikimedia.org/wiki/File:The_Squaw_Man_(1914).webm",
     "watchUrl": "https://commons.wikimedia.org/wiki/File:The_Squaw_Man_(1914).webm",
     "id": "movie-1914-squaw-man",
@@ -40,7 +40,7 @@
   {
     "title": "The Cabinet of Dr. Caligari (1920)",
     "description": "German silent horror film directed by Robert Wiene. The Wikimedia Commons video page identifies the work as Public Domain.",
-    "posterUrl": "/posters/caligari.jpg",
+    "posterUrl": "/posters/caligari.svg",
     "trailerUrl": "https://commons.wikimedia.org/wiki/File:The_Cabinet_of_Dr._Caligari.webm",
     "watchUrl": "https://commons.wikimedia.org/wiki/File:The_Cabinet_of_Dr._Caligari.webm",
     "id": "movie-1920-cabinet-caligari",
@@ -78,7 +78,7 @@
   {
     "title": "The Gold Rush (1925)",
     "description": "Silent comedy film written, directed and starring Charlie Chaplin. The Wikimedia Commons source identifies this 1925 work as Public Domain in the United States; copyright status can vary by jurisdiction.",
-    "posterUrl": "/posters/gold_rush.jpg",
+    "posterUrl": "/posters/gold_rush.svg",
     "trailerUrl": "https://commons.wikimedia.org/wiki/File:The_Gold_Rush_(1925).webm",
     "watchUrl": "https://commons.wikimedia.org/wiki/File:The_Gold_Rush_(1925).webm",
     "id": "movie-1925-gold-rush",
