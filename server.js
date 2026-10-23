@@ -316,6 +316,39 @@ app.get("/", (req, res) => {
 }
 </style>
 
+/* WORLD_MOVIE_APP_PURPLE_UNIFY_V1 */
+<style id="WMX_PURPLE_UNIFY_V1">
+.wmx-home{
+  --wmx-red:#9655f5;
+  --wmx-purple:#9655f5;
+  --wmx-purple-light:#bc93ff;
+}
+.wmx-home .wmx-brand span,
+.wmx-home .wmx-kicker,
+.wmx-home .wmx-hero h1 strong,
+.wmx-home .wmx-glass span,
+.wmx-home .wmx-membership small,
+.wmx-home .wmx-title small,
+.wmx-home .wmx-title a{
+  color:var(--wmx-purple-light)!important;
+}
+.wmx-home .wmx-hero-bg{
+  background:
+    radial-gradient(circle at 75% 42%,rgba(150,85,245,.30),transparent 30%),
+    radial-gradient(circle at 90% 80%,rgba(85,65,155,.24),transparent 32%)!important;
+}
+.wmx-home .wmx-primary,
+.wmx-home .wmx-cat:hover,
+.wmx-home .wmx-genres a:hover{
+  background:var(--wmx-purple)!important;
+  border-color:var(--wmx-purple)!important;
+  color:#fff!important;
+}
+.wmx-home .wmx-hero{
+  background:linear-gradient(110deg,#090711 0%,#100b1d 58%,#19102b 100%)!important;
+}
+</style>
+
 </head><body><script src="/miko/miko-loader.js" defer></script><div class="wmx-home">
 
 <header class="wmx-top">
