@@ -261,7 +261,62 @@ app.get("/", (req, res) => {
 
   const movieCount = movies.length;
 
-  res.send(`<!DOCTYPE html><html lang="en"><head><style id="wmx-desktop-poster-fix">@media (min-width:801px){.wmx-section{padding:32px 7% 12px}.movie-row{display:grid;grid-template-columns:repeat(6,160px);gap:22px;align-items:start}.movie-card{width:160px;min-width:160px}.movie-card .poster{width:160px;height:240px;overflow:hidden;border-radius:10px}.movie-card .poster img{width:100%;height:100%;object-fit:cover;display:block}.movie-info{width:160px}.movie-info h3{font-size:15px;line-height:1.3;margin:8px 0 4px}.movie-info p{font-size:12px;line-height:1.35;margin:0}}</style><meta charset="UTF-8"><meta name="google-site-verification" content="lfHcPxAGLAjVJcETATlrs-r7lX9gl0KPD92tA292a4c"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>World Movie App | Movies, Trailers & Movie Information</title></head><body><script src="/miko/miko-loader.js" defer></script><div class="wmx-home">
+  res.send(`<!DOCTYPE html><html lang="en"><head><style id="wmx-desktop-poster-fix">@media (min-width:801px){.wmx-section{padding:32px 7% 12px}.movie-row{display:grid;grid-template-columns:repeat(6,160px);gap:22px;align-items:start}.movie-card{width:160px;min-width:160px}.movie-card .poster{width:160px;height:240px;overflow:hidden;border-radius:10px}.movie-card .poster img{width:100%;height:100%;object-fit:cover;display:block}.movie-info{width:160px}.movie-info h3{font-size:15px;line-height:1.3;margin:8px 0 4px}.movie-info p{font-size:12px;line-height:1.35;margin:0}}</style><meta charset="UTF-8"><meta name="google-site-verification" content="lfHcPxAGLAjVJcETATlrs-r7lX9gl0KPD92tA292a4c"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>World Movie App | Movies, Trailers & Movie Information</title>
+<style id="WMX_CINEMATIC_POLISH_V1">
+:root {
+  --wmx-bg:#090711;
+  --wmx-surface:#131020;
+  --wmx-surface-2:#1b1630;
+  --wmx-purple:#9655f5;
+  --wmx-purple-light:#bc93ff;
+  --wmx-text:#f8f5ff;
+}
+.wmx-hero {
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:radial-gradient(ellipse at 78% 35%,rgba(150,85,245,.19),transparent 42%),linear-gradient(135deg,#090711 0%,#100b1d 58%,#17102a 100%);
+}
+.wmx-hero-content { position:relative; z-index:2; }
+.wmx-hero-content h1 {
+  color:var(--wmx-text);
+  letter-spacing:-.045em;
+  text-wrap:balance;
+}
+.wmx-hero-content h1 strong {
+  color:var(--wmx-purple-light);
+  text-shadow:0 0 36px rgba(150,85,245,.24);
+}
+.wmx-cinema-art {
+  border-color:rgba(188,147,255,.3);
+  filter:drop-shadow(0 18px 38px rgba(0,0,0,.28));
+}
+.wmx-art-poster {
+  background:linear-gradient(145deg,#211438,#100d1b 72%);
+  border:1px solid rgba(188,147,255,.28);
+  box-shadow:0 22px 70px rgba(0,0,0,.35),inset 0 0 32px rgba(150,85,245,.08);
+}
+.wmx-art-poster b { color:#f8f5ff; }
+.wmx-primary {
+  background:linear-gradient(135deg,#9655f5,#7137cf);
+  box-shadow:0 8px 24px rgba(150,85,245,.22);
+}
+.wmx-primary:hover { filter:brightness(1.12); }
+.wmx-secondary { border-color:rgba(188,147,255,.4); }
+@media(max-width:800px) {
+  .wmx-hero { padding-top:28px; }
+  .wmx-hero-content h1 { line-height:1.02; }
+  .wmx-hero-side { max-width:100%; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .wmx-hero *, .wmx-hero *::before, .wmx-hero *::after {
+    animation-duration:.01ms!important;
+    transition-duration:.01ms!important;
+  }
+}
+</style>
+
+</head><body><script src="/miko/miko-loader.js" defer></script><div class="wmx-home">
 
 <header class="wmx-top">
   <a class="wmx-brand" href="/">WORLD <span>MOVIE</span> APP</a>
@@ -298,7 +353,7 @@ app.get("/", (req, res) => {
       <div class="wmx-art-poster">
         <span class="wmx-art-eyebrow">WORLD MOVIE APP</span>
         <div class="wmx-art-symbol">✦</div>
-        <b>EVERY STORY<br>OPENS A<br>NEW WORLD</b>
+        <b>YOUR NEXT<br>GREAT MOVIE<br>AWAITS</b>
         <small>YOUR NEXT FAVORITE AWAITS</small>
       </div>
       <div class="wmx-art-chip">✦ DISCOVER YOUR NEXT FILM</div>
