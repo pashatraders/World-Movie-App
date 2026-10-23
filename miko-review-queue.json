@@ -581,5 +581,82 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-22T03:57:06.505Z"
+  },
+  {
+    "title": "Titanic (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q48674305",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-23T03:56:09.702Z"
+  },
+  {
+    "title": "Klara and the Sun (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q124409386",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-23T03:56:09.703Z"
+  },
+  {
+    "title": "A Talent for Murder (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q131935663",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-23T03:56:09.703Z"
+  },
+  {
+    "title": "Possible Love (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137843740",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-23T03:56:09.703Z"
+  },
+  {
+    "title": "Wicker (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136428321",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-23T03:56:09.703Z"
+  },
+  {
+    "title": "The Bad Son (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141084895",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-23T03:56:09.703Z"
+  },
+  {
+    "title": "Winter Lions (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141095139",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-23T03:56:09.703Z"
   }
 ]
