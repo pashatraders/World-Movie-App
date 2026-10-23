@@ -284,7 +284,7 @@ app.get("/", (req, res) => {
   <div class="wmx-hero-bg"></div>
   <div class="wmx-hero-content">
     <div class="wmx-kicker">WORLD MOVIE APP</div>
-    <h1>YOUR NEXT<br><strong>STORY</strong><br>STARTS HERE.</h1>
+    <h1>WATCH SOMETHING<br><strong>AMAZING</strong></h1>
     <p>Discover movies and entertainment from around the world through authorized and public-domain sources.</p>
     <div class="wmx-actions">
       <a href="/movies" class="wmx-primary">▶ Explore Movies</a>
