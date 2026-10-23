@@ -5,6 +5,256 @@ const fs = require("fs");
 const path = require("path");
 
 const app = express();
+
+// WMX_COMPLETE_CINEMATIC_HOME_V4
+app.use((req, res, next) => {
+  if (req.method !== "GET" || req.path !== "/") return next();
+
+  const originalSend = res.send;
+  res.send = function (body) {
+    if (typeof body === "string" && /<\/head>/i.test(body) &&
+        !body.includes("wmx-complete-home-v4-style")) {
+      const css = String.raw`
+        :root {
+          --wmx-bg:#080610; --wmx-panel:#120e20;
+          --wmx-panel2:#1b1430; --wmx-purple:#9655f5;
+          --wmx-lilac:#c6a4ff; --wmx-white:#faf7ff;
+          --wmx-muted:#b8aecb; --wmx-line:rgba(190,155,255,.17);
+        }
+        body {
+          background:
+            radial-gradient(ellipse at 80% 0%,rgba(112,54,190,.17),transparent 38%),
+            radial-gradient(ellipse at 0% 30%,rgba(78,36,135,.12),transparent 35%),
+            var(--wmx-bg)!important;
+          color:var(--wmx-white)!important;
+          font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
+        }
+        body * { box-sizing:border-box; }
+        body header, body nav {
+          background:rgba(10,7,18,.94)!important;
+          border-color:var(--wmx-line)!important;
+          backdrop-filter:blur(18px);
+        }
+        body a { transition:color .2s,background .2s,border-color .2s,transform .2s; }
+        body a:not(.wmx-v4-btn) { text-decoration:none; }
+        body button, body .btn, body input[type=submit] {
+          border-radius:12px!important;
+        }
+        .wmx-v4-hero {
+          isolation:isolate; position:relative; overflow:hidden;
+          display:grid; grid-template-columns:minmax(0,1.15fr) minmax(230px,.85fr);
+          align-items:center; gap:36px;
+          width:min(1440px,calc(100% - 48px)); margin:32px auto 38px;
+          min-height:360px; padding:clamp(28px,5vw,68px);
+          border:1px solid var(--wmx-line); border-radius:30px;
+          background:
+            radial-gradient(ellipse at 78% 45%,rgba(135,70,229,.34),transparent 38%),
+            linear-gradient(115deg,#171025 0%,#100b1b 58%,#211338 100%);
+          box-shadow:0 24px 80px rgba(0,0,0,.28);
+        }
+        .wmx-v4-hero:before {
+          content:""; position:absolute; z-index:-1; width:330px;height:330px;
+          right:8%;top:5%;border-radius:50%;
+          background:radial-gradient(circle,rgba(157,96,255,.2),rgba(110,58,190,.03) 65%,transparent 70%);
+          filter:blur(3px);
+        }
+        .wmx-v4-eyebrow {
+          display:inline-flex; align-items:center; gap:9px;
+          padding:8px 12px; border:1px solid rgba(198,164,255,.3);
+          border-radius:999px; color:var(--wmx-lilac);
+          background:rgba(150,85,245,.09); font-size:11px;
+          font-weight:800; letter-spacing:2px; text-transform:uppercase;
+        }
+        .wmx-v4-title {
+          max-width:760px; margin:20px 0 16px;
+          font-size:clamp(40px,6.5vw,78px)!important;
+          line-height:.99!important; letter-spacing:-3px!important;
+          font-weight:900!important; color:#fff!important;
+        }
+        .wmx-v4-title span { color:var(--wmx-lilac); }
+        .wmx-v4-copy {
+          max-width:560px; color:var(--wmx-muted);
+          font-size:clamp(14px,1.5vw,17px); line-height:1.8;
+        }
+        .wmx-v4-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:27px; }
+        .wmx-v4-btn {
+          display:inline-flex; align-items:center; justify-content:center;
+          min-height:48px; padding:0 21px; border-radius:12px;
+          font-weight:800; font-size:14px; color:white!important;
+          background:linear-gradient(135deg,#a56aff,#7540d7);
+          box-shadow:0 9px 26px rgba(125,66,219,.24);
+        }
+        .wmx-v4-btn:hover { transform:translateY(-2px); }
+        .wmx-v4-btn.alt {
+          background:rgba(255,255,255,.045); border:1px solid var(--wmx-line);
+          box-shadow:none;
+        }
+        .wmx-v4-art {
+          display:flex; align-items:center; justify-content:center;
+          min-height:220px; position:relative;
+        }
+        .wmx-v4-reel {
+          width:min(300px,100%); aspect-ratio:1/1;
+          display:grid; place-items:center; position:relative;
+          border:1px solid rgba(197,163,255,.3); border-radius:50%;
+          background:radial-gradient(circle,rgba(149,84,244,.2),rgba(149,84,244,.035) 60%,transparent 62%);
+          box-shadow:0 0 70px rgba(119,65,207,.16),inset 0 0 40px rgba(150,85,245,.1);
+        }
+        .wmx-v4-reel:before,.wmx-v4-reel:after {
+          content:"";position:absolute;inset:12%;border:1px solid rgba(198,164,255,.2);border-radius:50%;
+        }
+        .wmx-v4-reel:after { inset:25%; }
+        .wmx-v4-play {
+          width:94px;height:94px;display:grid;place-items:center;
+          padding-left:7px;border-radius:28px;
+          color:white;font-size:38px;
+          background:linear-gradient(140deg,#b78aff,#7940dc);
+          box-shadow:0 12px 45px rgba(150,85,245,.4);
+          transform:rotate(-7deg);
+        }
+        .wmx-v4-miko {
+          width:min(1440px,calc(100% - 48px)); margin:0 auto 42px;
+          display:flex;align-items:center;gap:18px;padding:22px 25px;
+          border:1px solid var(--wmx-line);border-radius:20px;
+          background:linear-gradient(100deg,rgba(29,20,48,.94),rgba(17,13,29,.94));
+        }
+        .wmx-v4-miko-icon {
+          flex:0 0 54px;width:54px;height:54px;display:grid;place-items:center;
+          border-radius:17px;background:rgba(150,85,245,.17);
+          font-size:29px;border:1px solid var(--wmx-line);
+        }
+        .wmx-v4-miko h2 { margin:0 0 5px!important;font-size:17px!important;color:white!important; }
+        .wmx-v4-miko p { margin:0!important;color:var(--wmx-muted)!important;font-size:13px;line-height:1.6; }
+        main > section:not(.wmx-v4-hero), main > div > section:not(.wmx-v4-hero) {
+          scroll-margin-top:90px;
+        }
+        body h2 {
+          color:#faf7ff!important; letter-spacing:-.5px;
+        }
+        body h3 { color:#f7f1ff!important; }
+        body main img[src*="poster"], body img[src*="/posters/"] {
+          object-fit:cover; background:#171124;
+        }
+        body main a:has(img[src*="/posters/"]),
+        body main article:has(img[src*="/posters/"]),
+        body main div:has(> img[src*="/posters/"]) {
+          transition:transform .22s,border-color .22s,box-shadow .22s;
+        }
+        body main a:has(img[src*="/posters/"]):hover,
+        body main article:has(img[src*="/posters/"]):hover {
+          transform:translateY(-5px);
+        }
+        body main img[src*="/posters/"] {
+          border-radius:13px!important;
+        }
+        body main section, body main article {
+          border-color:var(--wmx-line);
+        }
+        body main a[href="/movies"], body main a[href^="/movies?"] {
+          color:var(--wmx-lilac);
+        }
+        body footer {
+          margin-top:55px;border-color:var(--wmx-line)!important;
+          background:#090711!important;color:var(--wmx-muted)!important;
+        }
+        @media(max-width:760px) {
+          .wmx-v4-hero {
+            width:calc(100% - 24px);margin:14px auto 24px;
+            padding:28px 22px 24px;min-height:0;grid-template-columns:1fr;gap:4px;
+            border-radius:22px;
+          }
+          .wmx-v4-title { font-size:clamp(39px,11vw,59px)!important;letter-spacing:-1.8px!important; }
+          .wmx-v4-art { min-height:150px; }
+          .wmx-v4-reel { width:160px; }
+          .wmx-v4-play { width:62px;height:62px;border-radius:20px;font-size:27px; }
+          .wmx-v4-miko { width:calc(100% - 24px);padding:16px;margin-bottom:26px;gap:12px; }
+          .wmx-v4-miko-icon { flex-basis:44px;width:44px;height:44px;font-size:23px; }
+          body main { max-width:100%; }
+        }
+        @media(prefers-reduced-motion:reduce) {
+          body *,body *:before,body *:after { transition:none!important;scroll-behavior:auto!important; }
+        }
+      `;
+      const script = String.raw`
+        (function(){
+          if (document.documentElement.dataset.wmxHomeV4) return;
+          document.documentElement.dataset.wmxHomeV4 = "1";
+          const main = document.querySelector("main") || document.querySelector("#app") || document.body;
+          const heads = Array.from(document.querySelectorAll("h1"));
+          const old = heads.find(function(h){
+            return /YOUR NEXT|STORY STARTS HERE|STARTS HERE/i.test(h.textContent || "");
+          });
+          if (old) {
+            const section = old.closest("section") || old.closest('[class*="hero"]');
+            if (section && section !== main && !section.querySelector("main")) section.style.display = "none";
+          }
+
+          const hero = document.createElement("section");
+          hero.className = "wmx-v4-hero";
+          hero.setAttribute("aria-label","Watch Something Amazing");
+          hero.innerHTML =
+            '<div class="wmx-v4-content">' +
+              '<span class="wmx-v4-eyebrow">✦ YOUR CINEMA, REIMAGINED</span>' +
+              '<h1 class="wmx-v4-title">WATCH SOMETHING <span>AMAZING.</span></h1>' +
+              '<p class="wmx-v4-copy">Discover unforgettable films, explore timeless classics and find your next movie night favourite — all in one place.</p>' +
+              '<div class="wmx-v4-actions">' +
+                '<a class="wmx-v4-btn" href="/movies">▶&nbsp; Explore Movies</a>' +
+                '<a class="wmx-v4-btn alt" href="#wmx-v4-discover">Discover Collections&nbsp; ↗</a>' +
+              '</div>' +
+            '</div>' +
+            '<div class="wmx-v4-art" aria-hidden="true"><div class="wmx-v4-reel"><div class="wmx-v4-play">▶</div></div></div>';
+
+          main.insertBefore(hero, main.firstChild);
+
+          const sections = Array.from(main.querySelectorAll("section"));
+          let discover = null;
+          sections.forEach(function(sec){
+            if (sec === hero || sec.classList.contains("wmx-v4-miko")) return;
+            const txt = (sec.innerText || "").slice(0,500);
+            if (/Trending Now|Featured Collection|Latest Additions|Browse by Category|Coming Soon/i.test(txt)) {
+              sec.classList.add("wmx-v4-discover-section");
+              if (!discover) discover = sec;
+            }
+          });
+          if (discover) discover.id = "wmx-v4-discover";
+          else {
+            const target = main.querySelector("img[src*='/posters/']");
+            if (target) {
+              const sec = target.closest("section");
+              if (sec) sec.id = "wmx-v4-discover";
+            }
+          }
+
+          const mikoExists = Array.from(main.querySelectorAll("h1,h2,h3,h4"))
+            .some(function(h){ return /miko/i.test(h.textContent || ""); });
+          if (!mikoExists) {
+            const miko = document.createElement("aside");
+            miko.className = "wmx-v4-miko";
+            miko.innerHTML =
+              '<div class="wmx-v4-miko-icon" aria-hidden="true">🐤</div>' +
+              '<div><h2>Meet Miko — Your Movie Companion</h2>' +
+              '<p>Your friendly World Movie App companion is here to help you discover what to watch next.</p></div>';
+            hero.insertAdjacentElement("afterend", miko);
+          }
+
+          document.querySelectorAll("main img[src*='/posters/']").forEach(function(img){
+            img.loading = "lazy";
+            img.decoding = "async";
+            const card = img.closest("article") || img.closest("a");
+            if (card) card.classList.add("wmx-v4-movie-card");
+          });
+        })();
+      `;
+      body = body.replace(/<\/head>/i,
+        '<style id="wmx-complete-home-v4-style">' + css + '</style></head>');
+      body = body.replace(/<\/body>/i,
+        '<script id="wmx-complete-home-v4-script">' + script + '</' + 'script></body>');
+    }
+    return originalSend.call(this, body);
+  };
+  next();
+});
+// END WMX_COMPLETE_CINEMATIC_HOME_V4
 require("./seo")(app);
 const PORT = 3000;
 
