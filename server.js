@@ -247,8 +247,13 @@ app.use((req, res, next) => {
       `;
       body = body.replace(/<\/head>/i,
         '<style id="wmx-complete-home-v4-style">' + css + '</style></head>');
-      body = body.replace(/<\/body>/i,
-        '<script id="wmx-complete-home-v4-script">' + script + '</' + 'script></body>');
+      const injectedScript =
+        '<script id="wmx-complete-home-v4-script">' + script + '</' + 'script>';
+      if (/<\/body>/i.test(body)) {
+        body = body.replace(/<\/body>/i, injectedScript + '</body>');
+      } else {
+        body += injectedScript;
+      }
     }
     return originalSend.call(this, body);
   };
