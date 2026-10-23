@@ -260,6 +260,272 @@ app.use((req, res, next) => {
   next();
 });
 // END WMX_COMPLETE_CINEMATIC_HOME_V4
+
+// WMX_REAL_CINEMA_HOME_V5
+app.use((req, res, next) => {
+  if (req.method !== "GET" || req.path !== "/") return next();
+  const send = res.send;
+  res.send = function(body) {
+    if (typeof body === "string" && /<head\b/i.test(body) &&
+        !body.includes("wmx-real-cinema-v5-style")) {
+      const css = String.raw`
+        :root {
+          color-scheme: dark;
+          --cin-bg:#08070d; --cin-panel:#12101b; --cin-panel2:#1b1728;
+          --cin-purple:#9857ff; --cin-lilac:#c9a8ff;
+          --cin-text:#fbf8ff; --cin-muted:#aaa2b9;
+          --cin-border:rgba(201,168,255,.17);
+        }
+        html { background:var(--cin-bg)!important; scroll-behavior:smooth; }
+        body {
+          margin:0!important; color:var(--cin-text)!important;
+          background:
+            radial-gradient(ellipse at 78% 0%,rgba(125,57,221,.20),transparent 34%),
+            radial-gradient(ellipse at 5% 45%,rgba(76,35,135,.13),transparent 32%),
+            var(--cin-bg)!important;
+          font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif!important;
+        }
+        body * { box-sizing:border-box; }
+        body header,body nav {
+          background:rgba(10,8,16,.94)!important;
+          border-color:var(--cin-border)!important;
+        }
+        body header { position:relative; z-index:10; }
+        body nav a,body header a {
+          transition:color .2s ease,background .2s ease;
+        }
+        body nav a:hover,body header a:hover { color:var(--cin-lilac)!important; }
+        main { width:100%; max-width:none!important; margin:0 auto!important; padding:0 0 60px!important; }
+        .wmx-real-hero {
+          position:relative; isolation:isolate; overflow:hidden;
+          display:grid; grid-template-columns:minmax(0,1.4fr) minmax(240px,.6fr);
+          align-items:center; gap:36px;
+          width:min(1320px,92%); min-height:390px; margin:32px auto 42px;
+          padding:clamp(28px,5vw,68px);
+          border:1px solid var(--cin-border); border-radius:28px;
+          background:
+            radial-gradient(ellipse at 82% 45%,rgba(151,77,255,.34),transparent 35%),
+            radial-gradient(ellipse at 95% 100%,rgba(87,39,150,.3),transparent 42%),
+            linear-gradient(120deg,#171020 0%,#100c19 56%,#211337 100%);
+          box-shadow:0 24px 80px rgba(0,0,0,.3);
+        }
+        .wmx-real-hero:before {
+          content:""; position:absolute; z-index:-1; width:320px; height:320px;
+          right:8%; top:8%; border-radius:50%;
+          border:1px solid rgba(201,168,255,.20);
+          box-shadow:0 0 0 32px rgba(201,168,255,.025),0 0 0 66px rgba(201,168,255,.025);
+        }
+        .wmx-real-copy { position:relative; z-index:1; }
+        .wmx-real-eyebrow {
+          color:var(--cin-lilac); font-size:11px; font-weight:800;
+          letter-spacing:.24em; text-transform:uppercase; margin:0 0 20px;
+        }
+        .wmx-real-title {
+          max-width:720px; margin:0; color:#fff!important;
+          font-size:clamp(38px,6vw,76px)!important; line-height:.99!important;
+          letter-spacing:-.055em!important; font-weight:850!important;
+        }
+        .wmx-real-title span { color:var(--cin-lilac); }
+        .wmx-real-description {
+          max-width:510px; margin:22px 0 28px; color:#c3bbd1;
+          font-size:15px; line-height:1.8;
+        }
+        .wmx-real-actions { display:flex; flex-wrap:wrap; gap:12px; }
+        .wmx-real-btn {
+          display:inline-flex; align-items:center; justify-content:center;
+          min-height:46px; padding:0 22px; border-radius:999px;
+          font-size:13px; font-weight:750; text-decoration:none!important;
+          transition:transform .2s,filter .2s;
+        }
+        .wmx-real-btn:hover { transform:translateY(-2px); filter:brightness(1.12); }
+        .wmx-real-btn-primary {
+          background:linear-gradient(135deg,#a76aff,#7540d5); color:white!important;
+          box-shadow:0 8px 28px rgba(126,67,220,.25);
+        }
+        .wmx-real-btn-secondary {
+          border:1px solid rgba(226,211,255,.24); background:rgba(255,255,255,.045);
+          color:#f7f0ff!important;
+        }
+        .wmx-real-side {
+          position:relative; z-index:1; min-height:230px; padding:25px;
+          display:flex; flex-direction:column; justify-content:space-between;
+          border:1px solid rgba(213,185,255,.25); border-radius:22px;
+          background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));
+          backdrop-filter:blur(12px);
+        }
+        .wmx-real-orb {
+          display:grid; place-items:center; width:76px; height:76px; border-radius:24px;
+          background:radial-gradient(circle at 35% 25%,#f4d9ff,#a46bff 50%,#55249b);
+          color:white; font-size:34px; box-shadow:0 0 55px rgba(151,87,255,.28);
+        }
+        .wmx-real-side small {
+          color:var(--cin-lilac); font-size:10px; font-weight:800; letter-spacing:.2em;
+        }
+        .wmx-real-side h2 { margin:12px 0 8px; color:#fff!important; font-size:22px!important; }
+        .wmx-real-side p { margin:0; color:#bdb3ce; font-size:13px; line-height:1.65; }
+        .wmx-section {
+          width:min(1320px,92%); margin:0 auto 34px!important;
+          padding:24px 0 10px!important;
+        }
+        .wmx-section h2,.wmx-section h3 {
+          color:var(--cin-text)!important; letter-spacing:-.025em;
+        }
+        .wmx-section h2 { font-size:clamp(22px,3vw,30px)!important; }
+        .wmx-section p { color:var(--cin-muted); }
+        .movie-row {
+          display:grid!important;
+          grid-template-columns:repeat(auto-fill,minmax(145px,1fr))!important;
+          gap:22px!important; overflow:visible!important;
+        }
+        .movie-card,.wmx-v4-movie-card {
+          width:auto!important; min-width:0!important; overflow:hidden;
+          padding:0 0 13px!important; border-radius:15px!important;
+          border:1px solid rgba(201,168,255,.10)!important;
+          background:linear-gradient(180deg,#171321,#100e17)!important;
+          box-shadow:0 8px 26px rgba(0,0,0,.14);
+          transition:transform .22s,border-color .22s,box-shadow .22s;
+        }
+        .movie-card:hover,.wmx-v4-movie-card:hover {
+          transform:translateY(-5px); border-color:rgba(177,125,255,.65)!important;
+          box-shadow:0 18px 36px rgba(0,0,0,.32);
+        }
+        .movie-card .poster,.movie-info { width:100%!important; }
+        .movie-card .poster {
+          height:auto!important; aspect-ratio:2/3; overflow:hidden;
+          border-radius:0!important; background:#1b1527;
+        }
+        .movie-card .poster img,.movie-card img {
+          display:block; width:100%; height:100%; object-fit:cover;
+          transition:transform .35s;
+        }
+        .movie-card:hover .poster img { transform:scale(1.045); }
+        .movie-info { padding:10px 11px 0!important; }
+        .movie-info h3 { font-size:14px!important; line-height:1.4!important; margin:0 0 5px!important; }
+        .movie-info p { font-size:11px!important; line-height:1.5!important; }
+        body button,body .btn {
+          border-radius:999px;
+        }
+        body a { text-underline-offset:3px; }
+        .wmx-real-miko {
+          width:min(1320px,92%); margin:32px auto 12px; padding:25px 28px;
+          display:flex; align-items:center; gap:18px;
+          border:1px solid rgba(177,125,255,.28); border-radius:22px;
+          background:linear-gradient(110deg,rgba(95,52,148,.20),rgba(20,15,30,.9));
+        }
+        .wmx-real-miko .wmx-real-orb { width:58px; height:58px; flex:0 0 58px; border-radius:19px; font-size:26px; }
+        .wmx-real-miko h2 { margin:0 0 6px; font-size:19px!important; color:#fff!important; }
+        .wmx-real-miko p { margin:0; color:var(--cin-muted); font-size:13px; line-height:1.65; }
+        @media(max-width:760px) {
+          .wmx-real-hero {
+            width:92%; min-height:0; margin:18px auto 25px; padding:28px 23px;
+            grid-template-columns:1fr; gap:24px; border-radius:22px;
+          }
+          .wmx-real-hero:before { width:220px; height:220px; right:-50px; top:20px; }
+          .wmx-real-title { font-size:clamp(39px,12vw,60px)!important; }
+          .wmx-real-description { font-size:14px; margin:18px 0 22px; }
+          .wmx-real-side { min-height:0; display:grid; grid-template-columns:60px 1fr; gap:15px; padding:17px; }
+          .wmx-real-orb { width:58px; height:58px; border-radius:18px; font-size:27px; }
+          .wmx-real-side h2 { font-size:18px!important; margin:5px 0; }
+          .wmx-real-side p { font-size:12px; }
+          .wmx-section { width:92%; padding-top:15px!important; margin-bottom:24px!important; }
+          .movie-row { grid-template-columns:repeat(2,minmax(0,1fr))!important; gap:14px!important; }
+          .movie-info { padding:9px 9px 0!important; }
+          .movie-info h3 { font-size:13px!important; }
+          .wmx-real-miko { width:92%; padding:18px; align-items:flex-start; }
+        }
+        @media(min-width:761px) and (max-width:1050px) {
+          .wmx-real-hero { grid-template-columns:minmax(0,1.2fr) minmax(210px,.8fr); gap:20px; }
+          .movie-row { grid-template-columns:repeat(4,minmax(0,1fr))!important; }
+        }
+      `;
+      const js = String.raw`
+        (() => {
+          function buildWorldMovieHome() {
+            if (document.querySelector('.wmx-real-hero')) return;
+            const main = document.querySelector('main');
+            if (!main) return;
+
+            const legacyHero = [...main.querySelectorAll('section,div')]
+              .find(el => el.children.length < 12 &&
+                /YOUR NEXT|STORY STARTS HERE|STARTS HERE/i.test(el.innerText || '') &&
+                (el.innerText || '').length < 500);
+            if (legacyHero) legacyHero.style.display = 'none';
+
+            const hero = document.createElement('section');
+            hero.className = 'wmx-real-hero';
+            hero.innerHTML =
+              '<div class="wmx-real-copy">' +
+                '<p class="wmx-real-eyebrow">WORLD MOVIE APP · YOUR CINEMA, REIMAGINED</p>' +
+                '<h1 class="wmx-real-title">Watch Something <span>Amazing.</span></h1>' +
+                '<p class="wmx-real-description">Find your next favourite film. Explore timeless classics, discover new collections, and make every movie night memorable.</p>' +
+                '<div class="wmx-real-actions">' +
+                  '<a class="wmx-real-btn wmx-real-btn-primary" href="/movies">Explore Movies ↗</a>' +
+                  '<a class="wmx-real-btn wmx-real-btn-secondary" href="#wmx-discover">Discover Collections</a>' +
+                '</div>' +
+              '</div>' +
+              '<aside class="wmx-real-side">' +
+                '<div class="wmx-real-orb" aria-hidden="true">▶</div>' +
+                '<div><small>YOUR NEXT MOVIE NIGHT</small>' +
+                '<h2>Made for movie lovers.</h2>' +
+                '<p>Browse the collection and discover a story worth watching.</p></div>' +
+              '</aside>';
+            main.insertBefore(hero, main.firstChild);
+
+            const sections = [...main.querySelectorAll('.wmx-section')];
+            if (sections.length) {
+              sections.forEach((section, i) => {
+                if (i === 0) section.id = section.id || 'wmx-discover';
+                const heading = section.querySelector('h2,h3');
+                if (heading) heading.style.scrollMarginTop = '24px';
+              });
+            } else {
+              const headings = [...main.querySelectorAll('h2,h3')];
+              const first = headings.find(h => /trending|browse|featured|latest|movies/i.test(h.innerText || ''));
+              if (first) first.id = first.id || 'wmx-discover';
+            }
+
+            const existingMiko = [...main.querySelectorAll('h1,h2,h3')]
+              .find(h => /meet miko|miko.*companion|miko/i.test(h.innerText || ''));
+            if (existingMiko) {
+              const container = existingMiko.closest('section,article,.wmx-section') || existingMiko.parentElement;
+              if (container && !container.classList.contains('wmx-real-miko')) {
+                container.classList.add('wmx-real-miko');
+              }
+            } else {
+              const miko = document.createElement('section');
+              miko.className = 'wmx-real-miko';
+              miko.innerHTML = '<div class="wmx-real-orb" aria-hidden="true">✦</div><div><h2>Meet Miko — Your Movie Companion</h2><p>Your friendly World Movie App companion helps you discover what to watch next.</p></div>';
+              const lastSection = main.querySelector('.wmx-section:last-of-type');
+              if (lastSection) lastSection.insertAdjacentElement('afterend', miko);
+              else main.appendChild(miko);
+            }
+
+            main.querySelectorAll('img').forEach(img => {
+              if (img.closest('.movie-card,.wmx-v4-movie-card')) {
+                img.loading = 'lazy';
+                img.decoding = 'async';
+              }
+            });
+          }
+          if (document.readyState === 'loading') {
+            document.addEventListener('DOMContentLoaded', buildWorldMovieHome, {once:true});
+          } else {
+            buildWorldMovieHome();
+          }
+        })();
+      `;
+      body = body.replace(/<\/head>/i,
+        '<style id="wmx-real-cinema-v5-style">' + css + '</style></head>');
+      const script = '<script id="wmx-real-cinema-v5-script">' + js + '</' + 'script>';
+      if (/<\/body>/i.test(body)) body = body.replace(/<\/body>/i, script + '</body>');
+      else body += script;
+    }
+    return send.call(this, body);
+  };
+  next();
+});
+// END WMX_REAL_CINEMA_HOME_V5
+
 require("./seo")(app);
 const PORT = 3000;
 
