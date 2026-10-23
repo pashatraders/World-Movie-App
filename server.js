@@ -349,6 +349,102 @@ app.get("/", (req, res) => {
 }
 </style>
 
+
+<style id="WMX_PURPLE_RESPONSIVE_V2">
+.wmx-home {
+  --wmx-purple:#9655f5;
+  --wmx-purple-light:#bc93ff;
+  --wmx-bg:#090711;
+  --wmx-surface:#131020;
+  --wmx-surface-2:#1b1630;
+}
+.wmx-home .wmx-brand span,
+.wmx-home .wmx-kicker,
+.wmx-home .wmx-hero h1 strong,
+.wmx-home .wmx-glass span,
+.wmx-home .wmx-membership small,
+.wmx-home .wmx-title small,
+.wmx-home .wmx-title a {
+  color:var(--wmx-purple-light)!important;
+}
+.wmx-home .wmx-primary,
+.wmx-home .wmx-cat:hover,
+.wmx-home .wmx-genres a:hover,
+.wmx-home .wmx-view-btn.active,
+.wmx-home .wmx-switch button.active {
+  background:var(--wmx-purple)!important;
+  border-color:var(--wmx-purple)!important;
+  color:#fff!important;
+}
+.wmx-home .wmx-hero {
+  background:linear-gradient(115deg,#090711 0%,#100b1d 58%,#19102b 100%)!important;
+}
+.wmx-home .wmx-hero-bg {
+  background:
+    radial-gradient(circle at 75% 42%,rgba(150,85,245,.30),transparent 30%),
+    radial-gradient(circle at 90% 80%,rgba(85,65,155,.24),transparent 32%)!important;
+}
+.wmx-home .wmx-cat:hover,
+.wmx-home .wmx-genres a:hover {
+  box-shadow:0 5px 22px rgba(150,85,245,.22);
+}
+.wmx-home .wmx-cards {
+  grid-template-columns:repeat(auto-fill,minmax(135px,1fr))!important;
+  gap:20px 16px!important;
+}
+.wmx-home .wmx-cards > * {
+  min-width:0;
+}
+@media (min-width:801px) {
+  .wmx-home .wmx-hero {
+    min-height:610px!important;
+    padding-left:6%!important;
+    padding-right:6%!important;
+  }
+}
+@media (max-width:800px) {
+  .wmx-home .wmx-hero {
+    min-height:auto!important;
+    padding:42px 18px 30px!important;
+    display:flex!important;
+    flex-direction:column!important;
+    align-items:stretch!important;
+    gap:22px!important;
+  }
+  .wmx-home .wmx-hero-content {
+    width:100%!important;
+    max-width:100%!important;
+  }
+  .wmx-home .wmx-hero-content h1 {
+    font-size:clamp(34px,9vw,56px)!important;
+    line-height:1.04!important;
+    letter-spacing:-1.5px!important;
+    overflow-wrap:anywhere;
+  }
+  .wmx-home .wmx-hero p {
+    font-size:15px!important;
+    line-height:1.6!important;
+  }
+  .wmx-home .wmx-hero-side {
+    position:relative!important;
+    inset:auto!important;
+    width:100%!important;
+    max-width:100%!important;
+    display:flex!important;
+    margin:0!important;
+  }
+  .wmx-home .wmx-cards {
+    grid-template-columns:repeat(2,minmax(0,1fr))!important;
+    gap:18px 12px!important;
+  }
+}
+@media (max-width:360px) {
+  .wmx-home .wmx-cards {
+    gap:14px 8px!important;
+  }
+}
+</style>
+
 </head><body><script src="/miko/miko-loader.js" defer></script><div class="wmx-home">
 
 <header class="wmx-top">
