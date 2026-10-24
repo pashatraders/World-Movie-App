@@ -6,525 +6,9 @@ const path = require("path");
 
 const app = express();
 
-// WMX_COMPLETE_CINEMATIC_HOME_V4
-app.use((req, res, next) => {
-  if (req.method !== "GET" || req.path !== "/") return next();
 
-  const originalSend = res.send;
-  res.send = function (body) {
-    if (typeof body === "string" && /<\/head>/i.test(body) &&
-        !body.includes("wmx-complete-home-v4-style")) {
-      const css = String.raw`
-        :root {
-          --wmx-bg:#080610; --wmx-panel:#120e20;
-          --wmx-panel2:#1b1430; --wmx-purple:#9655f5;
-          --wmx-lilac:#c6a4ff; --wmx-white:#faf7ff;
-          --wmx-muted:#b8aecb; --wmx-line:rgba(190,155,255,.17);
-        }
-        body {
-          background:
-            radial-gradient(ellipse at 80% 0%,rgba(112,54,190,.17),transparent 38%),
-            radial-gradient(ellipse at 0% 30%,rgba(78,36,135,.12),transparent 35%),
-            var(--wmx-bg)!important;
-          color:var(--wmx-white)!important;
-          font-family:Inter,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif!important;
-        }
-        body * { box-sizing:border-box; }
-        body header, body nav {
-          background:rgba(10,7,18,.94)!important;
-          border-color:var(--wmx-line)!important;
-          backdrop-filter:blur(18px);
-        }
-        body a { transition:color .2s,background .2s,border-color .2s,transform .2s; }
-        body a:not(.wmx-v4-btn) { text-decoration:none; }
-        body button, body .btn, body input[type=submit] {
-          border-radius:12px!important;
-        }
-        .wmx-v4-hero {
-          isolation:isolate; position:relative; overflow:hidden;
-          display:grid; grid-template-columns:minmax(0,1.15fr) minmax(230px,.85fr);
-          align-items:center; gap:36px;
-          width:min(1440px,calc(100% - 48px)); margin:32px auto 38px;
-          min-height:360px; padding:clamp(28px,5vw,68px);
-          border:1px solid var(--wmx-line); border-radius:30px;
-          background:
-            radial-gradient(ellipse at 78% 45%,rgba(135,70,229,.34),transparent 38%),
-            linear-gradient(115deg,#171025 0%,#100b1b 58%,#211338 100%);
-          box-shadow:0 24px 80px rgba(0,0,0,.28);
-        }
-        .wmx-v4-hero:before {
-          content:""; position:absolute; z-index:-1; width:330px;height:330px;
-          right:8%;top:5%;border-radius:50%;
-          background:radial-gradient(circle,rgba(157,96,255,.2),rgba(110,58,190,.03) 65%,transparent 70%);
-          filter:blur(3px);
-        }
-        .wmx-v4-eyebrow {
-          display:inline-flex; align-items:center; gap:9px;
-          padding:8px 12px; border:1px solid rgba(198,164,255,.3);
-          border-radius:999px; color:var(--wmx-lilac);
-          background:rgba(150,85,245,.09); font-size:11px;
-          font-weight:800; letter-spacing:2px; text-transform:uppercase;
-        }
-        .wmx-v4-title {
-          max-width:760px; margin:20px 0 16px;
-          font-size:clamp(40px,6.5vw,78px)!important;
-          line-height:.99!important; letter-spacing:-3px!important;
-          font-weight:900!important; color:#fff!important;
-        }
-        .wmx-v4-title span { color:var(--wmx-lilac); }
-        .wmx-v4-copy {
-          max-width:560px; color:var(--wmx-muted);
-          font-size:clamp(14px,1.5vw,17px); line-height:1.8;
-        }
-        .wmx-v4-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:27px; }
-        .wmx-v4-btn {
-          display:inline-flex; align-items:center; justify-content:center;
-          min-height:48px; padding:0 21px; border-radius:12px;
-          font-weight:800; font-size:14px; color:white!important;
-          background:linear-gradient(135deg,#a56aff,#7540d7);
-          box-shadow:0 9px 26px rgba(125,66,219,.24);
-        }
-        .wmx-v4-btn:hover { transform:translateY(-2px); }
-        .wmx-v4-btn.alt {
-          background:rgba(255,255,255,.045); border:1px solid var(--wmx-line);
-          box-shadow:none;
-        }
-        .wmx-v4-art {
-          display:flex; align-items:center; justify-content:center;
-          min-height:220px; position:relative;
-        }
-        .wmx-v4-reel {
-          width:min(300px,100%); aspect-ratio:1/1;
-          display:grid; place-items:center; position:relative;
-          border:1px solid rgba(197,163,255,.3); border-radius:50%;
-          background:radial-gradient(circle,rgba(149,84,244,.2),rgba(149,84,244,.035) 60%,transparent 62%);
-          box-shadow:0 0 70px rgba(119,65,207,.16),inset 0 0 40px rgba(150,85,245,.1);
-        }
-        .wmx-v4-reel:before,.wmx-v4-reel:after {
-          content:"";position:absolute;inset:12%;border:1px solid rgba(198,164,255,.2);border-radius:50%;
-        }
-        .wmx-v4-reel:after { inset:25%; }
-        .wmx-v4-play {
-          width:94px;height:94px;display:grid;place-items:center;
-          padding-left:7px;border-radius:28px;
-          color:white;font-size:38px;
-          background:linear-gradient(140deg,#b78aff,#7940dc);
-          box-shadow:0 12px 45px rgba(150,85,245,.4);
-          transform:rotate(-7deg);
-        }
-        .wmx-v4-miko {
-          width:min(1440px,calc(100% - 48px)); margin:0 auto 42px;
-          display:flex;align-items:center;gap:18px;padding:22px 25px;
-          border:1px solid var(--wmx-line);border-radius:20px;
-          background:linear-gradient(100deg,rgba(29,20,48,.94),rgba(17,13,29,.94));
-        }
-        .wmx-v4-miko-icon {
-          flex:0 0 54px;width:54px;height:54px;display:grid;place-items:center;
-          border-radius:17px;background:rgba(150,85,245,.17);
-          font-size:29px;border:1px solid var(--wmx-line);
-        }
-        .wmx-v4-miko h2 { margin:0 0 5px!important;font-size:17px!important;color:white!important; }
-        .wmx-v4-miko p { margin:0!important;color:var(--wmx-muted)!important;font-size:13px;line-height:1.6; }
-        main > section:not(.wmx-v4-hero), main > div > section:not(.wmx-v4-hero) {
-          scroll-margin-top:90px;
-        }
-        body h2 {
-          color:#faf7ff!important; letter-spacing:-.5px;
-        }
-        body h3 { color:#f7f1ff!important; }
-        body main img[src*="poster"], body img[src*="/posters/"] {
-          object-fit:cover; background:#171124;
-        }
-        body main a:has(img[src*="/posters/"]),
-        body main article:has(img[src*="/posters/"]),
-        body main div:has(> img[src*="/posters/"]) {
-          transition:transform .22s,border-color .22s,box-shadow .22s;
-        }
-        body main a:has(img[src*="/posters/"]):hover,
-        body main article:has(img[src*="/posters/"]):hover {
-          transform:translateY(-5px);
-        }
-        body main img[src*="/posters/"] {
-          border-radius:13px!important;
-        }
-        body main section, body main article {
-          border-color:var(--wmx-line);
-        }
-        body main a[href="/movies"], body main a[href^="/movies?"] {
-          color:var(--wmx-lilac);
-        }
-        body footer {
-          margin-top:55px;border-color:var(--wmx-line)!important;
-          background:#090711!important;color:var(--wmx-muted)!important;
-        }
-        @media(max-width:760px) {
-          .wmx-v4-hero {
-            width:calc(100% - 24px);margin:14px auto 24px;
-            padding:28px 22px 24px;min-height:0;grid-template-columns:1fr;gap:4px;
-            border-radius:22px;
-          }
-          .wmx-v4-title { font-size:clamp(39px,11vw,59px)!important;letter-spacing:-1.8px!important; }
-          .wmx-v4-art { min-height:150px; }
-          .wmx-v4-reel { width:160px; }
-          .wmx-v4-play { width:62px;height:62px;border-radius:20px;font-size:27px; }
-          .wmx-v4-miko { width:calc(100% - 24px);padding:16px;margin-bottom:26px;gap:12px; }
-          .wmx-v4-miko-icon { flex-basis:44px;width:44px;height:44px;font-size:23px; }
-          body main { max-width:100%; }
-        }
-        @media(prefers-reduced-motion:reduce) {
-          body *,body *:before,body *:after { transition:none!important;scroll-behavior:auto!important; }
-        }
-      `;
-      const script = String.raw`
-        (function(){
-          if (document.documentElement.dataset.wmxHomeV4) return;
-          document.documentElement.dataset.wmxHomeV4 = "1";
-          const main = document.querySelector("main") || document.querySelector("#app") || document.body;
-          const heads = Array.from(document.querySelectorAll("h1"));
-          const old = heads.find(function(h){
-            return /YOUR NEXT|STORY STARTS HERE|STARTS HERE/i.test(h.textContent || "");
-          });
-          if (old) {
-            const section = old.closest("section") || old.closest('[class*="hero"]');
-            if (section && section !== main && !section.querySelector("main")) section.style.display = "none";
-          }
 
-          const hero = document.createElement("section");
-          hero.className = "wmx-v4-hero";
-          hero.setAttribute("aria-label","Watch Something Amazing");
-          hero.innerHTML =
-            '<div class="wmx-v4-content">' +
-              '<span class="wmx-v4-eyebrow">✦ YOUR CINEMA, REIMAGINED</span>' +
-              '<h1 class="wmx-v4-title">WATCH SOMETHING <span>AMAZING.</span></h1>' +
-              '<p class="wmx-v4-copy">Discover unforgettable films, explore timeless classics and find your next movie night favourite — all in one place.</p>' +
-              '<div class="wmx-v4-actions">' +
-                '<a class="wmx-v4-btn" href="/movies">▶&nbsp; Explore Movies</a>' +
-                '<a class="wmx-v4-btn alt" href="#wmx-v4-discover">Discover Collections&nbsp; ↗</a>' +
-              '</div>' +
-            '</div>' +
-            '<div class="wmx-v4-art" aria-hidden="true"><div class="wmx-v4-reel"><div class="wmx-v4-play">▶</div></div></div>';
 
-          main.insertBefore(hero, main.firstChild);
-
-          const sections = Array.from(main.querySelectorAll("section"));
-          let discover = null;
-          sections.forEach(function(sec){
-            if (sec === hero || sec.classList.contains("wmx-v4-miko")) return;
-            const txt = (sec.innerText || "").slice(0,500);
-            if (/Trending Now|Featured Collection|Latest Additions|Browse by Category|Coming Soon/i.test(txt)) {
-              sec.classList.add("wmx-v4-discover-section");
-              if (!discover) discover = sec;
-            }
-          });
-          if (discover) discover.id = "wmx-v4-discover";
-          else {
-            const target = main.querySelector("img[src*='/posters/']");
-            if (target) {
-              const sec = target.closest("section");
-              if (sec) sec.id = "wmx-v4-discover";
-            }
-          }
-
-          const mikoExists = Array.from(main.querySelectorAll("h1,h2,h3,h4"))
-            .some(function(h){ return /miko/i.test(h.textContent || ""); });
-          if (!mikoExists) {
-            const miko = document.createElement("aside");
-            miko.className = "wmx-v4-miko";
-            miko.innerHTML =
-              '<div class="wmx-v4-miko-icon" aria-hidden="true">🐤</div>' +
-              '<div><h2>Meet Miko — Your Movie Companion</h2>' +
-              '<p>Your friendly World Movie App companion is here to help you discover what to watch next.</p></div>';
-            hero.insertAdjacentElement("afterend", miko);
-          }
-
-          document.querySelectorAll("main img[src*='/posters/']").forEach(function(img){
-            img.loading = "lazy";
-            img.decoding = "async";
-            const card = img.closest("article") || img.closest("a");
-            if (card) card.classList.add("wmx-v4-movie-card");
-          });
-        })();
-      `;
-      body = body.replace(/<\/head>/i,
-        '<style id="wmx-complete-home-v4-style">' + css + '</style></head>');
-      const injectedScript =
-        '<script id="wmx-complete-home-v4-script">' + script + '</' + 'script>';
-      if (/<\/body>/i.test(body)) {
-        body = body.replace(/<\/body>/i, injectedScript + '</body>');
-      } else {
-        body += injectedScript;
-      }
-    }
-    return originalSend.call(this, body);
-  };
-  next();
-});
-// END WMX_COMPLETE_CINEMATIC_HOME_V4
-
-// WMX_REAL_CINEMA_HOME_V5
-app.use((req, res, next) => {
-  if (req.method !== "GET" || req.path !== "/") return next();
-  const send = res.send;
-  res.send = function(body) {
-    if (typeof body === "string" && /<head\b/i.test(body) &&
-        !body.includes("wmx-real-cinema-v5-style")) {
-      const css = String.raw`
-        :root {
-          color-scheme: dark;
-          --cin-bg:#08070d; --cin-panel:#12101b; --cin-panel2:#1b1728;
-          --cin-purple:#9857ff; --cin-lilac:#c9a8ff;
-          --cin-text:#fbf8ff; --cin-muted:#aaa2b9;
-          --cin-border:rgba(201,168,255,.17);
-        }
-        html { background:var(--cin-bg)!important; scroll-behavior:smooth; }
-        body {
-          margin:0!important; color:var(--cin-text)!important;
-          background:
-            radial-gradient(ellipse at 78% 0%,rgba(125,57,221,.20),transparent 34%),
-            radial-gradient(ellipse at 5% 45%,rgba(76,35,135,.13),transparent 32%),
-            var(--cin-bg)!important;
-          font-family:Inter,ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif!important;
-        }
-        body * { box-sizing:border-box; }
-        body header,body nav {
-          background:rgba(10,8,16,.94)!important;
-          border-color:var(--cin-border)!important;
-        }
-        body header { position:relative; z-index:10; }
-        body nav a,body header a {
-          transition:color .2s ease,background .2s ease;
-        }
-        body nav a:hover,body header a:hover { color:var(--cin-lilac)!important; }
-        main { width:100%; max-width:none!important; margin:0 auto!important; padding:0 0 60px!important; }
-        .wmx-real-hero {
-          position:relative; isolation:isolate; overflow:hidden;
-          display:grid; grid-template-columns:minmax(0,1.4fr) minmax(240px,.6fr);
-          align-items:center; gap:36px;
-          width:min(1320px,92%); min-height:390px; margin:32px auto 42px;
-          padding:clamp(28px,5vw,68px);
-          border:1px solid var(--cin-border); border-radius:28px;
-          background:
-            radial-gradient(ellipse at 82% 45%,rgba(151,77,255,.34),transparent 35%),
-            radial-gradient(ellipse at 95% 100%,rgba(87,39,150,.3),transparent 42%),
-            linear-gradient(120deg,#171020 0%,#100c19 56%,#211337 100%);
-          box-shadow:0 24px 80px rgba(0,0,0,.3);
-        }
-        .wmx-real-hero:before {
-          content:""; position:absolute; z-index:-1; width:320px; height:320px;
-          right:8%; top:8%; border-radius:50%;
-          border:1px solid rgba(201,168,255,.20);
-          box-shadow:0 0 0 32px rgba(201,168,255,.025),0 0 0 66px rgba(201,168,255,.025);
-        }
-        .wmx-real-copy { position:relative; z-index:1; }
-        .wmx-real-eyebrow {
-          color:var(--cin-lilac); font-size:11px; font-weight:800;
-          letter-spacing:.24em; text-transform:uppercase; margin:0 0 20px;
-        }
-        .wmx-real-title {
-          max-width:720px; margin:0; color:#fff!important;
-          font-size:clamp(38px,6vw,76px)!important; line-height:.99!important;
-          letter-spacing:-.055em!important; font-weight:850!important;
-        }
-        .wmx-real-title span { color:var(--cin-lilac); }
-        .wmx-real-description {
-          max-width:510px; margin:22px 0 28px; color:#c3bbd1;
-          font-size:15px; line-height:1.8;
-        }
-        .wmx-real-actions { display:flex; flex-wrap:wrap; gap:12px; }
-        .wmx-real-btn {
-          display:inline-flex; align-items:center; justify-content:center;
-          min-height:46px; padding:0 22px; border-radius:999px;
-          font-size:13px; font-weight:750; text-decoration:none!important;
-          transition:transform .2s,filter .2s;
-        }
-        .wmx-real-btn:hover { transform:translateY(-2px); filter:brightness(1.12); }
-        .wmx-real-btn-primary {
-          background:linear-gradient(135deg,#a76aff,#7540d5); color:white!important;
-          box-shadow:0 8px 28px rgba(126,67,220,.25);
-        }
-        .wmx-real-btn-secondary {
-          border:1px solid rgba(226,211,255,.24); background:rgba(255,255,255,.045);
-          color:#f7f0ff!important;
-        }
-        .wmx-real-side {
-          position:relative; z-index:1; min-height:230px; padding:25px;
-          display:flex; flex-direction:column; justify-content:space-between;
-          border:1px solid rgba(213,185,255,.25); border-radius:22px;
-          background:linear-gradient(145deg,rgba(255,255,255,.09),rgba(255,255,255,.025));
-          backdrop-filter:blur(12px);
-        }
-        .wmx-real-orb {
-          display:grid; place-items:center; width:76px; height:76px; border-radius:24px;
-          background:radial-gradient(circle at 35% 25%,#f4d9ff,#a46bff 50%,#55249b);
-          color:white; font-size:34px; box-shadow:0 0 55px rgba(151,87,255,.28);
-        }
-        .wmx-real-side small {
-          color:var(--cin-lilac); font-size:10px; font-weight:800; letter-spacing:.2em;
-        }
-        .wmx-real-side h2 { margin:12px 0 8px; color:#fff!important; font-size:22px!important; }
-        .wmx-real-side p { margin:0; color:#bdb3ce; font-size:13px; line-height:1.65; }
-        .wmx-section {
-          width:min(1320px,92%); margin:0 auto 34px!important;
-          padding:24px 0 10px!important;
-        }
-        .wmx-section h2,.wmx-section h3 {
-          color:var(--cin-text)!important; letter-spacing:-.025em;
-        }
-        .wmx-section h2 { font-size:clamp(22px,3vw,30px)!important; }
-        .wmx-section p { color:var(--cin-muted); }
-        .movie-row {
-          display:grid!important;
-          grid-template-columns:repeat(auto-fill,minmax(145px,1fr))!important;
-          gap:22px!important; overflow:visible!important;
-        }
-        .movie-card,.wmx-v4-movie-card {
-          width:auto!important; min-width:0!important; overflow:hidden;
-          padding:0 0 13px!important; border-radius:15px!important;
-          border:1px solid rgba(201,168,255,.10)!important;
-          background:linear-gradient(180deg,#171321,#100e17)!important;
-          box-shadow:0 8px 26px rgba(0,0,0,.14);
-          transition:transform .22s,border-color .22s,box-shadow .22s;
-        }
-        .movie-card:hover,.wmx-v4-movie-card:hover {
-          transform:translateY(-5px); border-color:rgba(177,125,255,.65)!important;
-          box-shadow:0 18px 36px rgba(0,0,0,.32);
-        }
-        .movie-card .poster,.movie-info { width:100%!important; }
-        .movie-card .poster {
-          height:auto!important; aspect-ratio:2/3; overflow:hidden;
-          border-radius:0!important; background:#1b1527;
-        }
-        .movie-card .poster img,.movie-card img {
-          display:block; width:100%; height:100%; object-fit:cover;
-          transition:transform .35s;
-        }
-        .movie-card:hover .poster img { transform:scale(1.045); }
-        .movie-info { padding:10px 11px 0!important; }
-        .movie-info h3 { font-size:14px!important; line-height:1.4!important; margin:0 0 5px!important; }
-        .movie-info p { font-size:11px!important; line-height:1.5!important; }
-        body button,body .btn {
-          border-radius:999px;
-        }
-        body a { text-underline-offset:3px; }
-        .wmx-real-miko {
-          width:min(1320px,92%); margin:32px auto 12px; padding:25px 28px;
-          display:flex; align-items:center; gap:18px;
-          border:1px solid rgba(177,125,255,.28); border-radius:22px;
-          background:linear-gradient(110deg,rgba(95,52,148,.20),rgba(20,15,30,.9));
-        }
-        .wmx-real-miko .wmx-real-orb { width:58px; height:58px; flex:0 0 58px; border-radius:19px; font-size:26px; }
-        .wmx-real-miko h2 { margin:0 0 6px; font-size:19px!important; color:#fff!important; }
-        .wmx-real-miko p { margin:0; color:var(--cin-muted); font-size:13px; line-height:1.65; }
-        @media(max-width:760px) {
-          .wmx-real-hero {
-            width:92%; min-height:0; margin:18px auto 25px; padding:28px 23px;
-            grid-template-columns:1fr; gap:24px; border-radius:22px;
-          }
-          .wmx-real-hero:before { width:220px; height:220px; right:-50px; top:20px; }
-          .wmx-real-title { font-size:clamp(39px,12vw,60px)!important; }
-          .wmx-real-description { font-size:14px; margin:18px 0 22px; }
-          .wmx-real-side { min-height:0; display:grid; grid-template-columns:60px 1fr; gap:15px; padding:17px; }
-          .wmx-real-orb { width:58px; height:58px; border-radius:18px; font-size:27px; }
-          .wmx-real-side h2 { font-size:18px!important; margin:5px 0; }
-          .wmx-real-side p { font-size:12px; }
-          .wmx-section { width:92%; padding-top:15px!important; margin-bottom:24px!important; }
-          .movie-row { grid-template-columns:repeat(2,minmax(0,1fr))!important; gap:14px!important; }
-          .movie-info { padding:9px 9px 0!important; }
-          .movie-info h3 { font-size:13px!important; }
-          .wmx-real-miko { width:92%; padding:18px; align-items:flex-start; }
-        }
-        @media(min-width:761px) and (max-width:1050px) {
-          .wmx-real-hero { grid-template-columns:minmax(0,1.2fr) minmax(210px,.8fr); gap:20px; }
-          .movie-row { grid-template-columns:repeat(4,minmax(0,1fr))!important; }
-        }
-      `;
-      const js = String.raw`
-        (() => {
-          function buildWorldMovieHome() {
-            if (document.querySelector('.wmx-real-hero')) return;
-            const main = document.querySelector('main');
-            if (!main) return;
-
-            const legacyHero = [...main.querySelectorAll('section,div')]
-              .find(el => el.children.length < 12 &&
-                /YOUR NEXT|STORY STARTS HERE|STARTS HERE/i.test(el.innerText || '') &&
-                (el.innerText || '').length < 500);
-            if (legacyHero) legacyHero.style.display = 'none';
-
-            const hero = document.createElement('section');
-            hero.className = 'wmx-real-hero';
-            hero.innerHTML =
-              '<div class="wmx-real-copy">' +
-                '<p class="wmx-real-eyebrow">WORLD MOVIE APP · YOUR CINEMA, REIMAGINED</p>' +
-                '<h1 class="wmx-real-title">Watch Something <span>Amazing.</span></h1>' +
-                '<p class="wmx-real-description">Find your next favourite film. Explore timeless classics, discover new collections, and make every movie night memorable.</p>' +
-                '<div class="wmx-real-actions">' +
-                  '<a class="wmx-real-btn wmx-real-btn-primary" href="/movies">Explore Movies ↗</a>' +
-                  '<a class="wmx-real-btn wmx-real-btn-secondary" href="#wmx-discover">Discover Collections</a>' +
-                '</div>' +
-              '</div>' +
-              '<aside class="wmx-real-side">' +
-                '<div class="wmx-real-orb" aria-hidden="true">▶</div>' +
-                '<div><small>YOUR NEXT MOVIE NIGHT</small>' +
-                '<h2>Made for movie lovers.</h2>' +
-                '<p>Browse the collection and discover a story worth watching.</p></div>' +
-              '</aside>';
-            main.insertBefore(hero, main.firstChild);
-
-            const sections = [...main.querySelectorAll('.wmx-section')];
-            if (sections.length) {
-              sections.forEach((section, i) => {
-                if (i === 0) section.id = section.id || 'wmx-discover';
-                const heading = section.querySelector('h2,h3');
-                if (heading) heading.style.scrollMarginTop = '24px';
-              });
-            } else {
-              const headings = [...main.querySelectorAll('h2,h3')];
-              const first = headings.find(h => /trending|browse|featured|latest|movies/i.test(h.innerText || ''));
-              if (first) first.id = first.id || 'wmx-discover';
-            }
-
-            const existingMiko = [...main.querySelectorAll('h1,h2,h3')]
-              .find(h => /meet miko|miko.*companion|miko/i.test(h.innerText || ''));
-            if (existingMiko) {
-              const container = existingMiko.closest('section,article,.wmx-section') || existingMiko.parentElement;
-              if (container && !container.classList.contains('wmx-real-miko')) {
-                container.classList.add('wmx-real-miko');
-              }
-            } else {
-              const miko = document.createElement('section');
-              miko.className = 'wmx-real-miko';
-              miko.innerHTML = '<div class="wmx-real-orb" aria-hidden="true">✦</div><div><h2>Meet Miko — Your Movie Companion</h2><p>Your friendly World Movie App companion helps you discover what to watch next.</p></div>';
-              const lastSection = main.querySelector('.wmx-section:last-of-type');
-              if (lastSection) lastSection.insertAdjacentElement('afterend', miko);
-              else main.appendChild(miko);
-            }
-
-            main.querySelectorAll('img').forEach(img => {
-              if (img.closest('.movie-card,.wmx-v4-movie-card')) {
-                img.loading = 'lazy';
-                img.decoding = 'async';
-              }
-            });
-          }
-          if (document.readyState === 'loading') {
-            document.addEventListener('DOMContentLoaded', buildWorldMovieHome, {once:true});
-          } else {
-            buildWorldMovieHome();
-          }
-        })();
-      `;
-      body = body.replace(/<\/head>/i,
-        '<style id="wmx-real-cinema-v5-style">' + css + '</style></head>');
-      const script = '<script id="wmx-real-cinema-v5-script">' + js + '</' + 'script>';
-      if (/<\/body>/i.test(body)) body = body.replace(/<\/body>/i, script + '</body>');
-      else body += script;
-    }
-    return send.call(this, body);
-  };
-  next();
-});
-// END WMX_REAL_CINEMA_HOME_V5
 
 require("./seo")(app);
 const PORT = 3000;
@@ -1043,6 +527,9 @@ app.get("/", (req, res) => {
   </div>
 </section>
 
+
+
+
 <section class="wmx-search-wrap">
   <div class="wmx-search">
     <span>⌕</span>
@@ -1062,6 +549,15 @@ app.get("/", (req, res) => {
   <div class="wmx-categories">
     ${categories.map(c => `<button class="wmx-cat" data-cat="${safe(c).toLowerCase()}">${safe(c)}</button>`).join("")}
   </div>
+</section>
+
+<section class="wmx-miko-inline" aria-label="Meet Miko">
+  <div class="wmx-miko-inline-avatar" aria-hidden="true">🐤</div>
+  <div class="wmx-miko-inline-copy">
+    <h2>Meet Miko</h2>
+    <p>Your friendly movie companion helps you discover something worth watching.</p>
+  </div>
+  <a href="/movies" class="wmx-miko-inline-link">Discover movies →</a>
 </section>
 
 ${row("Trending Now","Popular titles worth discovering",trending,"trending","🔥")}
@@ -1104,24 +600,24 @@ ${row("Coming Soon","Titles marked for future release",comingSoon,"coming-soon",
 .wmx-home{background:#050609;color:#fff;min-height:100vh;font-family:Arial,sans-serif}
 .wmx-top{height:74px;padding:0 6%;display:flex;align-items:center;justify-content:space-between;background:#050609;border-bottom:1px solid #171a21;position:sticky;top:0;z-index:20}
 .wmx-brand{font-size:22px;font-weight:900;letter-spacing:-1px;color:#fff;text-decoration:none}
-.wmx-brand span{color:#e50914}
+.wmx-brand span{color:#9655f5}
 .wmx-top nav{display:flex;gap:28px}
 .wmx-top nav a{color:#bbb;text-decoration:none;font-size:14px}
 .wmx-top nav a:hover{color:#fff}
 .wmx-hero{min-height:650px;position:relative;overflow:hidden;display:flex;align-items:center;padding:0 7%;background:linear-gradient(90deg,#050609 0%,#080b12 48%,#101522 100%)}
-.wmx-hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 75% 45%,rgba(229,9,20,.3),transparent 27%),radial-gradient(circle at 90% 80%,rgba(55,95,190,.3),transparent 30%);pointer-events:none}
+.wmx-hero-bg{position:absolute;inset:0;background:radial-gradient(circle at 75% 45%,rgba(150,85,245,.3),transparent 27%),radial-gradient(circle at 90% 80%,rgba(55,95,190,.3),transparent 30%);pointer-events:none}
 .wmx-hero-content{position:relative;z-index:2;max-width:720px}
-.wmx-kicker{color:#e50914;font-size:13px;font-weight:bold;letter-spacing:5px;margin-bottom:20px}
+.wmx-kicker{color:#9655f5;font-size:13px;font-weight:bold;letter-spacing:5px;margin-bottom:20px}
 .wmx-hero h1{font-size:clamp(52px,7vw,92px);line-height:.9;letter-spacing:-5px;margin:0;font-weight:900}
-.wmx-hero h1 strong{color:#e50914}
+.wmx-hero h1 strong{color:#9655f5}
 .wmx-hero p{color:#aeb4bf;font-size:17px;line-height:1.7;max-width:600px;margin:28px 0}
 .wmx-actions{display:flex;gap:12px;flex-wrap:wrap}
 .wmx-primary,.wmx-secondary{padding:15px 24px;border-radius:5px;text-decoration:none;font-weight:bold}
-.wmx-primary{background:#e50914;color:#fff}
+.wmx-primary{background:#9655f5;color:#fff}
 .wmx-secondary{background:#fff;color:#111}
 .wmx-hero-side{position:absolute;right:7%;bottom:55px;width:310px;z-index:2}
 .wmx-glass{padding:25px;border:1px solid #303746;border-radius:14px;background:rgba(10,14,23,.72);backdrop-filter:blur(15px);box-shadow:0 25px 70px #000}
-.wmx-glass span,.wmx-membership small,.wmx-title small{font-size:11px;color:#e50914;letter-spacing:3px;font-weight:bold}
+.wmx-glass span,.wmx-membership small,.wmx-title small{font-size:11px;color:#9655f5;letter-spacing:3px;font-weight:bold}
 .wmx-glass b{display:block;font-size:20px;margin:10px 0}
 .wmx-glass small{color:#9ca4b2;line-height:1.6}
 .wmx-search-wrap{padding:34px 7%;background:#080a0f}
@@ -1138,10 +634,10 @@ ${row("Coming Soon","Titles marked for future release",comingSoon,"coming-soon",
 .movie-info p{font-size:12px;line-height:1.35;margin:0}
 .wmx-title{display:flex;align-items:end;justify-content:space-between;margin-bottom:22px}
 .wmx-title h2{font-size:30px;margin:7px 0 0}
-.wmx-title a{color:#e50914;text-decoration:none}
+.wmx-title a{color:#9655f5;text-decoration:none}
 .wmx-categories,.wmx-genres{display:flex;gap:10px;flex-wrap:wrap}
 .wmx-cat,.wmx-genres a{background:#11151d;border:1px solid #252b36;color:#c5cad3;padding:11px 17px;border-radius:4px;text-decoration:none;cursor:pointer}
-.wmx-cat:hover,.wmx-genres a:hover{background:#e50914;color:#fff;border-color:#e50914}
+.wmx-cat:hover,.wmx-genres a:hover{background:#9655f5;color:#fff;border-color:#9655f5}
 .wmx-membership{margin:70px 7%;padding:55px;display:flex;justify-content:space-between;gap:35px;align-items:center;border:1px solid #292f3b;border-radius:18px;background:linear-gradient(120deg,#11151e,#090b10)}
 .wmx-membership h2{font-size:38px;margin:12px 0}
 .wmx-membership p{color:#9ea5b1;max-width:600px;line-height:1.6}
@@ -1155,6 +651,35 @@ ${row("Coming Soon","Titles marked for future release",comingSoon,"coming-soon",
  .wmx-hero-side{display:none}.wmx-hero h1{font-size:56px}
  .wmx-membership{margin:45px 6%;padding:30px;display:block}
  .wmx-plans{margin-top:25px;flex-wrap:wrap}.wmx-footer{display:block}
+}
+
+.wmx-miko-panel{width:86%;max-width:1320px;margin:28px auto 16px;padding:24px 28px;display:flex;align-items:center;gap:20px;border:1px solid rgba(177,128,255,.24);border-radius:20px;background:linear-gradient(105deg,rgba(42,25,67,.88),rgba(17,13,29,.96));box-shadow:0 18px 55px rgba(0,0,0,.18)}
+.wmx-miko-avatar{width:66px;height:66px;flex:0 0 66px;display:grid;place-items:center;border-radius:20px;background:rgba(150,85,245,.16);border:1px solid rgba(188,147,255,.3);font-size:35px}
+.wmx-miko-copy{min-width:0;flex:1}.wmx-miko-kicker{font-size:10px;font-weight:800;letter-spacing:2.5px;color:#bc93ff}.wmx-miko-copy h2{margin:6px 0;font-size:24px;color:#f8f5ff}.wmx-miko-copy p{margin:0;color:#b5aec7;font-size:14px;line-height:1.65}.wmx-miko-link{display:inline-flex;align-items:center;gap:10px;white-space:nowrap;padding:12px 17px;border-radius:11px;background:#9655f5;color:#fff;text-decoration:none;font-size:13px;font-weight:700}.wmx-miko-link:hover{background:#a875ff}
+@media(max-width:650px){.wmx-miko-panel{width:calc(100% - 32px);padding:18px;gap:13px;flex-wrap:wrap}.wmx-miko-avatar{width:52px;height:52px;flex-basis:52px;border-radius:16px;font-size:28px}.wmx-miko-copy{flex:1 1 calc(100% - 70px)}.wmx-miko-copy h2{font-size:21px}.wmx-miko-copy p{font-size:13px}.wmx-miko-link{margin-left:65px}}
+
+/* MINIMAL INLINE HOMEPAGE LAYOUT */
+.wmx-miko-inline{width:86%;max-width:1320px;margin:8px auto 28px;padding:16px 10px;display:flex;align-items:center;gap:15px;border-top:1px solid rgba(177,128,255,.22);border-bottom:1px solid rgba(177,128,255,.22);background:transparent}
+.wmx-miko-inline-avatar{width:43px;height:43px;flex:0 0 43px;display:grid;place-items:center;border-radius:50%;background:rgba(150,85,245,.16);border:1px solid rgba(188,147,255,.35);font-size:25px}
+.wmx-miko-inline-copy{flex:1;min-width:0}
+.wmx-miko-inline-copy h2{font-size:17px;margin:0 0 4px;color:var(--wmx-text,#f8f5ff)}
+.wmx-miko-inline-copy p{font-size:12px;line-height:1.6;margin:0;color:var(--wmx-muted,#b5aec7)}
+.wmx-miko-inline-link{font-size:12px;font-weight:700;color:var(--wmx-purple-light,#bc93ff);text-decoration:none;white-space:nowrap}
+.wmx-miko-inline-link:hover{text-decoration:underline}
+.wmx-home .wmx-section{scroll-margin-top:95px}
+.wmx-home .wmx-categories{display:flex;flex-wrap:wrap;gap:9px}
+.wmx-home .wmx-cat{border-radius:999px}
+.wmx-home .movie-card{transition:transform .2s ease,box-shadow .2s ease}
+.wmx-home .movie-card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(0,0,0,.28)}
+.wmx-home .movie-card .poster img{transition:transform .25s ease}
+.wmx-home .movie-card:hover .poster img{transform:scale(1.035)}
+@media(max-width:650px){
+.wmx-miko-inline{width:calc(100% - 32px);padding:15px 0;gap:11px;flex-wrap:wrap}
+.wmx-miko-inline-avatar{width:38px;height:38px;flex-basis:38px;font-size:22px}
+.wmx-miko-inline-copy{flex:1 1 calc(100% - 55px)}
+.wmx-miko-inline-copy h2{font-size:16px}
+.wmx-miko-inline-copy p{font-size:12px}
+.wmx-miko-inline-link{margin-left:49px}
 }
 </style>
 <style>
@@ -1177,7 +702,7 @@ ${row("Coming Soon","Titles marked for future release",comingSoon,"coming-soon",
   font-size:12px;
 }
 .wmx-view-switch button.active{
-  background:#e50914;
+  background:#9655f5;
   color:#fff;
 }
 body.wmx-mobile-mode{
@@ -2597,7 +2122,7 @@ input{
 }
 
 button{
-  background:#e50914;
+  background:#9655f5;
   color:white;
   border:0;
   font-weight:bold;
@@ -3096,7 +2621,7 @@ input,textarea,select{
 }
 
 button{
-  background:#e50914;
+  background:#9655f5;
   color:white;
   border:0;
   font-weight:bold;
@@ -3356,7 +2881,7 @@ input,textarea,select{
 }
 
 button{
-  background:#e50914;
+  background:#9655f5;
   color:white;
   border:0;
   font-weight:bold;
@@ -3652,7 +3177,7 @@ app.get("/movie/:id", (req, res) => {
             display:inline-block;
             margin-top:20px;
             padding:12px 22px;
-            background:#e50914;
+            background:#9655f5;
             color:#fff;
             text-decoration:none;
             border-radius:8px;
@@ -3745,7 +3270,7 @@ app.get("/movie/:id", (req, res) => {
       letter-spacing:.5px;
     }
 
-    .brand span{color:#e50914}
+    .brand span{color:#9655f5}
 
     .navlinks{
       display:flex;
@@ -3769,7 +3294,7 @@ app.get("/movie/:id", (req, res) => {
       gap:55px;
       align-items:center;
       background:
-        radial-gradient(circle at 75% 35%,rgba(229,9,20,.18),transparent 35%),
+        radial-gradient(circle at 75% 35%,rgba(150,85,245,.18),transparent 35%),
         linear-gradient(180deg,#111 0%,#070707 100%);
     }
 
@@ -3802,7 +3327,7 @@ app.get("/movie/:id", (req, res) => {
     }
 
     .eyebrow{
-      color:#e50914;
+      color:#9655f5;
       font-size:13px;
       font-weight:800;
       text-transform:uppercase;
@@ -3873,7 +3398,7 @@ app.get("/movie/:id", (req, res) => {
     .btn:hover{transform:translateY(-2px)}
 
     .btn.primary{
-      background:#e50914;
+      background:#9655f5;
       color:#fff;
     }
 
@@ -3982,636 +3507,7 @@ app.get("/movie/:id", (req, res) => {
 }
 
 
-/* WORLD_MOVIE_APP_MODERN_PURPLE_THEME_V2 */
-:root {
-  --wmx-bg: #090711;
-  --wmx-surface: #131020;
-  --wmx-surface-2: #1b1630;
-  --wmx-purple: #9655f5;
-  --wmx-purple-light: #bc93ff;
-  --wmx-text: #f8f5ff;
-  --wmx-muted: #b5aec7;
-  --wmx-line: rgba(177, 128, 255, .2);
-}
-html {
-  scroll-behavior: smooth;
-  scroll-padding-top: 90px;
-}
-body {
-  background: var(--wmx-bg);
-  color: var(--wmx-text);
-}
-.wmx-home {
-  min-height: 100vh;
-  overflow: clip;
-  background:
-    radial-gradient(ellipse at 85% 0%, rgba(115, 55, 190, .11), transparent 35%),
-    var(--wmx-bg);
-  color: var(--wmx-text);
-  font-family: Inter, "Segoe UI", Arial, sans-serif;
-}
-.wmx-top {
-  min-height: 76px;
-  height: auto;
-  padding: 14px clamp(18px, 5vw, 76px);
-  gap: 18px;
-  background: rgba(9, 7, 17, .94);
-  border-bottom: 1px solid var(--wmx-line);
-  backdrop-filter: blur(18px);
-}
-.wmx-brand {
-  flex-shrink: 0;
-  font-size: clamp(18px, 2vw, 24px);
-  letter-spacing: -.7px;
-  color: var(--wmx-text);
-}
-.wmx-brand span {
-  color: var(--wmx-purple-light);
-}
-.wmx-top nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  flex-wrap: wrap;
-  gap: clamp(10px, 2vw, 26px);
-}
-.wmx-top nav a {
-  color: #d0c9df;
-  font-size: 13px;
-  font-weight: 600;
-  text-decoration: none;
-}
-.wmx-top nav a:hover {
-  color: var(--wmx-purple-light);
-}
-.wmx-view-switch {
-  background: var(--wmx-surface);
-  border-color: var(--wmx-line);
-}
-.wmx-view-switch button.active {
-  background: var(--wmx-purple);
-  color: white;
-}
-.wmx-hero {
-  position: relative;
-  min-height: clamp(440px, 57vw, 650px);
-  padding: clamp(54px, 8vw, 100px) clamp(22px, 7vw, 100px);
-  align-items: center;
-  background:
-    radial-gradient(ellipse at 78% 35%, rgba(134, 70, 230, .34), transparent 32%),
-    radial-gradient(ellipse at 95% 90%, rgba(70, 34, 117, .3), transparent 35%),
-    linear-gradient(115deg, #0b0913 10%, #151025 58%, #24143b 100%);
-}
-.wmx-hero-bg {
-  background:
-    linear-gradient(90deg, #090711 0%, rgba(9, 7, 17, .88) 35%, rgba(9, 7, 17, .16) 100%),
-    radial-gradient(ellipse at 78% 50%, rgba(169, 112, 255, .2), transparent 38%);
-}
-.wmx-hero-content {
-  max-width: 720px;
-}
-.wmx-kicker {
-  color: var(--wmx-purple-light);
-  font-size: 12px;
-  letter-spacing: 4px;
-  margin-bottom: 22px;
-}
-.wmx-hero h1 {
-  max-width: 780px;
-  font-size: clamp(42px, 7.2vw, 88px);
-  line-height: .98;
-  letter-spacing: clamp(-4px, -.35vw, -1px);
-  overflow-wrap: anywhere;
-}
-.wmx-hero h1 strong {
-  color: var(--wmx-purple-light);
-  text-shadow: 0 0 38px rgba(150, 85, 245, .24);
-}
-.wmx-hero p {
-  max-width: 560px;
-  color: #c4bdd2;
-  font-size: clamp(14px, 1.4vw, 17px);
-  line-height: 1.75;
-}
-.wmx-actions {
-  gap: 12px;
-}
-.wmx-primary, .wmx-secondary {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 46px;
-  padding: 13px 21px;
-  border: 1px solid transparent;
-  border-radius: 8px;
-  font-size: 14px;
-  transition: .2s ease;
-}
-.wmx-primary {
-  color: white;
-  background: linear-gradient(135deg, #a56aff, #7637d4);
-  box-shadow: 0 8px 28px rgba(123, 61, 217, .22);
-}
-.wmx-primary:hover {
-  color: white;
-  transform: translateY(-2px);
-  box-shadow: 0 12px 32px rgba(123, 61, 217, .35);
-}
-.wmx-secondary {
-  color: #f1eaff;
-  background: rgba(255,255,255,.055);
-  border-color: rgba(208, 184, 255, .28);
-}
-.wmx-secondary:hover {
-  color: white;
-  background: rgba(150, 85, 245, .16);
-}
-.wmx-hero-side {
-  right: clamp(20px, 6vw, 82px);
-  bottom: 42px;
-  width: min(310px, 28%);
-}
-.wmx-glass {
-  background: rgba(15, 11, 28, .78);
-  border: 1px solid rgba(194, 160, 255, .25);
-  border-radius: 15px;
-  box-shadow: 0 20px 65px rgba(0,0,0,.28);
-}
-.wmx-glass span, .wmx-membership small, .wmx-title small {
-  color: var(--wmx-purple-light);
-}
-.wmx-search-wrap {
-  padding: 28px clamp(18px, 7vw, 100px);
-  background: linear-gradient(180deg, #100c1b, #0b0912);
-}
-.wmx-search {
-  max-width: 850px;
-  border: 1px solid var(--wmx-line);
-  border-radius: 12px;
-  background: #151020;
-  transition: border-color .2s, box-shadow .2s;
-}
-.wmx-search:focus-within {
-  border-color: var(--wmx-purple);
-  box-shadow: 0 0 0 3px rgba(150, 85, 245, .12);
-}
-.wmx-search span {
-  color: var(--wmx-purple-light);
-}
-.wmx-search input {
-  min-width: 0;
-  color: white;
-}
-.wmx-search input::placeholder {
-  color: #8e859f;
-}
-.wmx-section {
-  padding: 38px clamp(18px, 5vw, 76px) 12px;
-  margin: 0 auto;
-  max-width: 1800px;
-}
-.wmx-title {
-  gap: 16px;
-  margin-bottom: 20px;
-}
-.wmx-title h2 {
-  color: #f8f5ff;
-  font-size: clamp(22px, 2.4vw, 30px);
-  letter-spacing: -.5px;
-}
-.wmx-title a {
-  flex-shrink: 0;
-  color: var(--wmx-purple-light);
-}
-.wmx-title a:hover {
-  color: white;
-}
-.wmx-categories, .wmx-genres {
-  gap: 10px;
-}
-.wmx-cat, .wmx-genres a {
-  padding: 10px 15px;
-  border: 1px solid var(--wmx-line);
-  border-radius: 999px;
-  background: #151020;
-  color: #d6cfe4;
-  transition: .2s ease;
-}
-.wmx-cat:hover, .wmx-genres a:hover {
-  background: rgba(150, 85, 245, .19);
-  border-color: var(--wmx-purple);
-  color: white;
-}
-.content-section {
-  padding: 34px clamp(18px, 5vw, 76px) 12px;
-  margin: 0 auto;
-  max-width: 1800px;
-}
-.section-heading {
-  display: flex;
-  align-items: flex-end;
-  justify-content: space-between;
-  gap: 16px;
-  margin-bottom: 20px;
-}
-.section-heading h2 {
-  margin: 5px 0 8px;
-  color: var(--wmx-text);
-  font-size: clamp(22px, 2.4vw, 30px);
-  letter-spacing: -.5px;
-}
-.section-heading p {
-  margin: 0;
-  color: var(--wmx-muted);
-  font-size: 13px;
-  line-height: 1.5;
-}
-.section-heading .eyebrow {
-  color: var(--wmx-purple-light);
-  font-size: 10px;
-  letter-spacing: 2px;
-  text-transform: uppercase;
-}
-.section-count {
-  flex-shrink: 0;
-  color: #b4a4d0;
-  font-size: 12px;
-}
-.movie-row {
-  display: flex;
-  align-items: stretch;
-  gap: 17px;
-  width: 100%;
-  padding: 2px 2px 18px;
-  overflow-x: auto;
-  overflow-y: hidden;
-  overscroll-behavior-x: contain;
-  scroll-snap-type: x proximity;
-  scrollbar-width: thin;
-  scrollbar-color: #654096 #171122;
-}
-.movie-row::-webkit-scrollbar {
-  height: 6px;
-}
-.movie-row::-webkit-scrollbar-track {
-  background: #171122;
-  border-radius: 10px;
-}
-.movie-row::-webkit-scrollbar-thumb {
-  background: #654096;
-  border-radius: 10px;
-}
-.movie-card {
-  flex: 0 0 clamp(145px, 15vw, 205px);
-  width: clamp(145px, 15vw, 205px);
-  min-width: 0;
-  overflow: hidden;
-  scroll-snap-align: start;
-  border: 1px solid rgba(178, 134, 255, .15);
-  border-radius: 12px;
-  background: linear-gradient(180deg, #171225, #100d19);
-  transition: transform .22s ease, border-color .22s ease, box-shadow .22s ease;
-  cursor: pointer;
-}
-.movie-card:hover {
-  transform: translateY(-5px);
-  border-color: rgba(184, 142, 255, .65);
-  box-shadow: 0 14px 34px rgba(0,0,0,.32);
-}
-.movie-card .poster {
-  position: relative;
-  width: 100%;
-  height: auto;
-  aspect-ratio: 2 / 3;
-  overflow: hidden;
-  background: #211830;
-}
-.movie-card .poster img {
-  display: block;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: transform .35s ease;
-}
-.movie-card:hover .poster img {
-  transform: scale(1.045);
-}
-.movie-card .poster-top {
-  display: flex;
-  justify-content: space-between;
-  gap: 5px;
-  padding: 8px;
-  font-size: 10px;
-}
-.type-badge, .rating-badge {
-  padding: 5px 7px;
-  border: 1px solid rgba(255,255,255,.12);
-  border-radius: 6px;
-  background: rgba(12,8,20,.82);
-  color: #f5efff;
-  backdrop-filter: blur(8px);
-}
-.movie-card .poster-overlay {
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  padding: 12px;
-  background: linear-gradient(transparent, rgba(10,6,18,.92));
-}
-.movie-card .poster-overlay a {
-  padding: 8px 11px;
-  border: 1px solid rgba(202,174,255,.5);
-  border-radius: 7px;
-  background: rgba(118,55,212,.88);
-  color: white;
-  text-decoration: none;
-  font-size: 12px;
-  font-weight: 700;
-}
-.movie-info {
-  min-width: 0;
-  padding: 11px;
-}
-.movie-info .meta-line {
-  display: flex;
-  justify-content: space-between;
-  gap: 6px;
-  color: #a99fba;
-  font-size: 10px;
-  line-height: 1.4;
-}
-.movie-info .category {
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-.movie-info h3 {
-  margin: 7px 0 5px;
-  color: #f8f5ff;
-  font-size: 13px;
-  line-height: 1.35;
-  overflow-wrap: anywhere;
-}
-.movie-info .genre, .movie-info .language {
-  color: #aaa0bb;
-  font-size: 11px;
-  line-height: 1.5;
-  overflow-wrap: anywhere;
-}
-.movie-info .buttons {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-top: 10px;
-}
-.movie-info .buttons a {
-  flex: 1;
-  min-width: 0;
-  padding: 8px 6px;
-  border: 1px solid var(--wmx-line);
-  border-radius: 7px;
-  text-align: center;
-  text-decoration: none;
-  color: #e9dfff;
-  font-size: 11px;
-}
-.movie-info .buttons a.details {
-  background: rgba(150,85,245,.16);
-  border-color: rgba(150,85,245,.38);
-}
-.movie-info .buttons a:hover {
-  background: var(--wmx-purple);
-  color: white;
-}
-.no-poster {
-  display: grid;
-  place-items: center;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg,#211830,#100d19);
-  font-size: 34px;
-}
-.wmx-genres a {
-  display: inline-flex;
-}
-.wmx-membership {
-  margin: 64px clamp(18px, 5vw, 76px);
-  padding: clamp(24px, 4vw, 54px);
-  gap: 30px;
-  border: 1px solid var(--wmx-line);
-  border-radius: 20px;
-  background:
-    radial-gradient(ellipse at 100% 0%, rgba(150,85,245,.2), transparent 42%),
-    linear-gradient(120deg, #171126, #0e0b16);
-  box-shadow: 0 20px 70px rgba(0,0,0,.18);
-}
-.wmx-membership h2 {
-  color: var(--wmx-text);
-  font-size: clamp(25px, 3.2vw, 39px);
-  line-height: 1.15;
-  letter-spacing: -.8px;
-}
-.wmx-membership p {
-  color: var(--wmx-muted);
-  line-height: 1.75;
-}
-.wmx-plans {
-  gap: 12px;
-}
-.wmx-plans div {
-  min-width: 150px;
-  padding: 20px;
-  border: 1px solid var(--wmx-line);
-  border-radius: 12px;
-  background: rgba(10,7,17,.68);
-}
-.wmx-plans b {
-  color: var(--wmx-purple-light);
-  letter-spacing: 1px;
-}
-.wmx-plans strong {
-  color: white;
-  font-size: clamp(19px, 2vw, 24px);
-}
-.wmx-plans span {
-  color: var(--wmx-muted);
-}
-.wmx-footer {
-  gap: 12px;
-  padding: 32px clamp(18px, 5vw, 76px);
-  border-top: 1px solid var(--wmx-line);
-  color: #a59bb7;
-}
-.wmx-footer b {
-  color: #eee6ff;
-}
-.wmx-mobile-mode .wmx-brand {
-  font-size: 21px !important;
-  letter-spacing: -.5px !important;
-}
-.wmx-mobile-mode .wmx-view-switch button {
-  font-size: 12px !important;
-}
-.wmx-mobile-mode .wmx-hero h1 {
-  font-size: clamp(38px, 10vw, 52px) !important;
-  line-height: 1 !important;
-  letter-spacing: -2px !important;
-}
-.wmx-mobile-mode .movie-row {
-  display: flex !important;
-  overflow-x: auto !important;
-  gap: 11px !important;
-  padding-bottom: 14px !important;
-}
-.wmx-mobile-mode .movie-card {
-  flex: 0 0 132px !important;
-  width: 132px !important;
-  max-width: 132px !important;
-}
-.wmx-mobile-mode .movie-card .poster {
-  width: 100% !important;
-  height: auto !important;
-  aspect-ratio: 2 / 3 !important;
-}
-.wmx-mobile-mode .movie-info {
-  padding: 7px !important;
-}
-.wmx-mobile-mode .movie-info h3 {
-  font-size: 12px !important;
-  line-height: 1.3 !important;
-}
-.wmx-mobile-mode .movie-info .meta-line {
-  font-size: 9px !important;
-}
-.wmx-mobile-mode .movie-info .genre,
-.wmx-mobile-mode .movie-info .language {
-  font-size: 10px !important;
-}
-.wmx-mobile-mode .movie-info .buttons {
-  display: flex !important;
-  flex-direction: column;
-  gap: 5px;
-}
-@media (min-width: 1100px) {
-  .wmx-hero {
-    min-height: 620px;
-  }
-}
-@media (max-width: 800px) {
-  .wmx-top {
-    position: sticky;
-    padding: 13px 16px;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .wmx-top > div {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .wmx-top nav {
-    display: flex !important;
-    justify-content: flex-start;
-    flex-wrap: wrap;
-    gap: 12px 18px;
-  }
-  .wmx-top nav a {
-    font-size: 12px;
-  }
-  .wmx-view-switch {
-    margin-left: 0;
-  }
-  .wmx-hero {
-    min-height: 490px;
-    padding: 58px 24px;
-  }
-  .wmx-hero-side {
-    display: none;
-  }
-  .wmx-hero h1 {
-    font-size: clamp(42px, 8vw, 64px);
-    letter-spacing: -2px;
-  }
-  .wmx-section, .content-section {
-    padding: 30px 20px 8px;
-  }
-  .wmx-membership {
-    margin: 42px 20px;
-    padding: 26px;
-    display: block;
-  }
-  .wmx-plans {
-    margin-top: 22px;
-    flex-wrap: wrap;
-  }
-}
-@media (max-width: 480px) {
-  .wmx-top {
-    align-items: flex-start;
-  }
-  .wmx-brand {
-    font-size: 20px;
-  }
-  .wmx-top nav {
-    gap: 10px 14px;
-  }
-  .wmx-hero {
-    min-height: 450px;
-    padding: 48px 19px;
-  }
-  .wmx-hero h1 {
-    font-size: clamp(37px, 10vw, 48px);
-    letter-spacing: -1.5px;
-  }
-  .wmx-hero p {
-    font-size: 14px;
-  }
-  .wmx-primary, .wmx-secondary {
-    padding: 12px 14px;
-    font-size: 12px;
-  }
-  .wmx-search-wrap {
-    padding: 22px 16px;
-  }
-  .wmx-section, .content-section {
-    padding: 27px 15px 6px;
-  }
-  .section-heading {
-    align-items: flex-start;
-  }
-  .section-heading p {
-    max-width: 260px;
-  }
-  .section-count {
-    font-size: 10px;
-  }
-  .wmx-title h2, .section-heading h2 {
-    font-size: 22px;
-  }
-  .wmx-membership {
-    margin: 34px 15px;
-    padding: 22px 18px;
-  }
-  .wmx-plans {
-    display: grid;
-    grid-template-columns: 1fr;
-  }
-  .wmx-footer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 28px 18px;
-  }
-}
-@media (prefers-reduced-motion: reduce) {
-  *, *::before, *::after {
-    scroll-behavior: auto !important;
-    transition-duration: .01ms !important;
-    animation-duration: .01ms !important;
-  }
-}
 
-</style>
 </head>
 
 <body>
