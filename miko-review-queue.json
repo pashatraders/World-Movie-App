@@ -658,5 +658,27 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-23T03:56:09.703Z"
+  },
+  {
+    "title": "Clayface (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q131460936",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-24T03:55:00.867Z"
+  },
+  {
+    "title": "Ghosts: The Possession of Button House (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q138502284",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-24T03:55:00.868Z"
   }
 ]
