@@ -680,5 +680,38 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-24T03:55:00.868Z"
+  },
+  {
+    "title": "The Evil Inside (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-25T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141833932",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-25T03:55:46.102Z"
+  },
+  {
+    "title": "Flies (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137829298",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-25T03:55:46.102Z"
+  },
+  {
+    "title": "Lapland War (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q134112950",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-25T03:55:46.102Z"
   }
 ]
