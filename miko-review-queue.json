@@ -779,5 +779,82 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-28T04:05:39.926Z"
+  },
+  {
+    "title": "Sundays (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-29T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q132732126",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-29T10:12:50.815Z"
+  },
+  {
+    "title": "Teenage Sex and Death at Camp Miasma (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-29T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q134434223",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-29T10:12:50.815Z"
+  },
+  {
+    "title": "Rose (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-29T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136458718",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-29T10:12:50.815Z"
+  },
+  {
+    "title": "Free at Heart (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-29T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136533586",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-29T10:12:50.815Z"
+  },
+  {
+    "title": "Minotaur (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-29T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137612975",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-29T10:12:50.815Z"
+  },
+  {
+    "title": "Biermann (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-29T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q138637664",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-29T10:12:50.815Z"
+  },
+  {
+    "title": "Mumbo Jumbo (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-29T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139100608",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-29T10:12:50.815Z"
   }
 ]
