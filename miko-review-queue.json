@@ -867,5 +867,38 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-10-30T10:14:41.019Z"
+  },
+  {
+    "title": "The Last Tape (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-31T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q138576947",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-31T09:49:16.460Z"
+  },
+  {
+    "title": "The Mongoose (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-30T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q132240256",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-31T09:49:16.461Z"
+  },
+  {
+    "title": "The Mosquito Bowl (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-30T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137826900",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-10-31T09:49:16.461Z"
   }
 ]
