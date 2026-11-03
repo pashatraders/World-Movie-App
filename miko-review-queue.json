@@ -911,5 +911,38 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-01T10:38:50.599Z"
+  },
+  {
+    "title": "Her Blind Date Is Her New Boss (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-01T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141970025",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-03T11:03:47.570Z"
+  },
+  {
+    "title": "The Hidden Billionaire Heiress (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-31T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141969995",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-03T11:03:47.570Z"
+  },
+  {
+    "title": "Dear People, Dear Citizens (2026)",
+    "year": 2026,
+    "releaseDate": "2026-10-30T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141934764",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-03T11:03:47.570Z"
   }
 ]
