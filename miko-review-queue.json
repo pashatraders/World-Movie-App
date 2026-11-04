@@ -944,5 +944,49 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-03T11:03:47.570Z"
+  },
+  {
+    "title": "Rammstein - Live in Mexico City (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-04T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141893801",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-04T11:12:33.299Z"
+  },
+  {
+    "title": "Axis of Life (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-04T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141917746",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-04T11:12:33.300Z"
+  },
+  {
+    "title": "A Dog's Perfect Christmas (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-04T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141567333",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-04T11:12:33.300Z"
+  },
+  {
+    "title": "The Table: Day and Night (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-04T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141128047",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-04T11:12:33.300Z"
   }
 ]
