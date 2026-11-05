@@ -988,5 +988,82 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-04T11:12:33.300Z"
+  },
+  {
+    "title": "Wild Horse Nine (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-05T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q133341572",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-05T11:12:17.913Z"
+  },
+  {
+    "title": "War with the Salamanders (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-05T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137687465",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-05T11:12:17.913Z"
+  },
+  {
+    "title": "Kyiv. Day-Night (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-05T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139573919",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-05T11:12:17.914Z"
+  },
+  {
+    "title": "Ha-Chan, Shake Your Booty! (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-05T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137380441",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-05T11:12:17.914Z"
+  },
+  {
+    "title": "Einar Schleef – Ich habe kein Deutschland gefunden (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-05T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140266665",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-05T11:12:17.914Z"
+  },
+  {
+    "title": "Block 10 (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-05T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140268801",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-05T11:12:17.914Z"
+  },
+  {
+    "title": "Unsafe (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-05T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141682347",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-05T11:12:17.914Z"
   }
 ]
