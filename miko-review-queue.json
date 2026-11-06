@@ -1065,5 +1065,82 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-05T11:12:17.914Z"
+  },
+  {
+    "title": "Pray for Us (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q135509074",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-06T11:10:41.752Z"
+  },
+  {
+    "title": "Being Heumann (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q135644103",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-06T11:10:41.752Z"
+  },
+  {
+    "title": "Ghost Soldier (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136502675",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-06T11:10:41.752Z"
+  },
+  {
+    "title": "You Can See Everything (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141336617",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-06T11:10:41.752Z"
+  },
+  {
+    "title": "Blood Border: Cambodia's 2nd Killing Fields (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140694625",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-06T11:10:41.752Z"
+  },
+  {
+    "title": "Fiesta Pagäna (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141862030",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-06T11:10:41.752Z"
+  },
+  {
+    "title": "Hope (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-05T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q117429496",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-06T11:10:41.752Z"
   }
 ]
