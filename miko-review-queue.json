@@ -1142,5 +1142,16 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-06T11:10:41.752Z"
+  },
+  {
+    "title": "A Pagan Party (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141862030",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-07T10:27:38.933Z"
   }
 ]
