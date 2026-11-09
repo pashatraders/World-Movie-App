@@ -1164,5 +1164,27 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-08T10:35:36.594Z"
+  },
+  {
+    "title": "Godzilla Minus Zero (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136700760",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-09T11:49:41.548Z"
+  },
+  {
+    "title": "Club Kid (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139042812",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-09T11:49:41.548Z"
   }
 ]
