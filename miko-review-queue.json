@@ -1186,5 +1186,38 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-09T11:49:41.548Z"
+  },
+  {
+    "title": "Laatbloeier (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-10T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141802827",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-10T11:24:57.099Z"
+  },
+  {
+    "title": "Santa’s Workshop (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q142085731",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-10T11:24:57.099Z"
+  },
+  {
+    "title": "Disco (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-06T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q142095570",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-10T11:24:57.099Z"
   }
 ]
