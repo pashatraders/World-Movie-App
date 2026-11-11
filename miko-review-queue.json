@@ -1219,5 +1219,49 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-10T11:24:57.099Z"
+  },
+  {
+    "title": "The Green Eyes (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-11T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140502097",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-11T11:12:37.093Z"
+  },
+  {
+    "title": "Villeneuve: The Rise of a Legend (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-11T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140643846",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-11T11:12:37.093Z"
+  },
+  {
+    "title": "Carnaval (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-11T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141805277",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-11T11:12:37.093Z"
+  },
+  {
+    "title": "GOAL (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-11T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141943535",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-11T11:12:37.093Z"
   }
 ]
