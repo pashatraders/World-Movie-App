@@ -1351,5 +1351,60 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-12T11:30:22.858Z"
+  },
+  {
+    "title": "I Play Rocky (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-13T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136524973",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-14T10:40:52.995Z"
+  },
+  {
+    "title": "How to Rob a Bank (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-13T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q134520822",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-14T10:40:52.995Z"
+  },
+  {
+    "title": "The Beloved (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-12T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q132240260",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-14T10:40:52.995Z"
+  },
+  {
+    "title": "Good Thing Mom Doesn't Know (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-12T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139573960",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-14T10:40:52.995Z"
+  },
+  {
+    "title": "Leica – Ein Jahrhundert in Bildern (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-12T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141540977",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-14T10:40:52.995Z"
   }
 ]
