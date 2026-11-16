@@ -1417,5 +1417,16 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-15T11:14:16.053Z"
+  },
+  {
+    "title": "Heartland (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-13T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136757568",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-16T11:45:04.550Z"
   }
 ]
