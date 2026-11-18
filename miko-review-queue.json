@@ -1428,5 +1428,49 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-16T11:45:04.550Z"
+  },
+  {
+    "title": "Nobody's Violence (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-18T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136376466",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-18T11:57:32.712Z"
+  },
+  {
+    "title": "Full Blast (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-17T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q948456",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-18T11:57:32.712Z"
+  },
+  {
+    "title": "Labrador — Autopsy of Silence (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-17T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136662325",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-18T11:57:32.712Z"
+  },
+  {
+    "title": "Roxette – Live in Sydney 1991 (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-17T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q142138264",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-18T11:57:32.712Z"
   }
 ]
