@@ -1472,5 +1472,93 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-18T11:57:32.712Z"
+  },
+  {
+    "title": "Paradise (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-19T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q1171019",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-19T11:53:51.112Z"
+  },
+  {
+    "title": "Hokum (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-19T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q133397105",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-19T11:53:51.112Z"
+  },
+  {
+    "title": "The Best Way is by Accident (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-19T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136670148",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-19T11:53:51.112Z"
+  },
+  {
+    "title": "Dark Horse (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-19T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137324956",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-19T11:53:51.112Z"
+  },
+  {
+    "title": "The House with Chimaeras (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-19T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139573987",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-19T11:53:51.112Z"
+  },
+  {
+    "title": "Carlo Acutis: The Millennial Saint (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-19T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q142109958",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-19T11:53:51.112Z"
+  },
+  {
+    "title": "The Diary of a Chambermaid (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-19T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139377859",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-19T11:53:51.112Z"
+  },
+  {
+    "title": "Heysel 85 (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-19T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137785342",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-19T11:53:51.112Z"
   }
 ]
