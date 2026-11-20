@@ -1560,5 +1560,60 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-19T11:53:51.112Z"
+  },
+  {
+    "title": "Dog Days of Summer (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-20T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q5288174",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-20T11:55:49.326Z"
+  },
+  {
+    "title": "Josephine (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-20T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q128502486",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-20T11:55:49.327Z"
+  },
+  {
+    "title": "Skinny Boots (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-20T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139885711",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-20T11:55:49.327Z"
+  },
+  {
+    "title": "Red Snow (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-20T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140393539",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-20T11:55:49.327Z"
+  },
+  {
+    "title": "Steps (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-20T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140324214",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-20T11:55:49.327Z"
   }
 ]
