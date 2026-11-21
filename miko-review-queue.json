@@ -1615,5 +1615,82 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-20T11:55:49.327Z"
+  },
+  {
+    "title": "The Secret Heart (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q768223",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-21T11:25:31.237Z"
+  },
+  {
+    "title": "In a Whisper (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q138013977",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-21T11:25:31.237Z"
+  },
+  {
+    "title": "All About Corinne (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140814763",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-21T11:25:31.238Z"
+  },
+  {
+    "title": "Nina Roza (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137832534",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-21T11:25:31.238Z"
+  },
+  {
+    "title": "I'm Glad You're Dead Now (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q134599561",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-21T11:25:31.238Z"
+  },
+  {
+    "title": "Do You Love Me (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-21T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139709702",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-21T11:25:31.238Z"
+  },
+  {
+    "title": "The Hunger Games: Sunrise on the Reaping (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-20T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q126390739",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-21T11:25:31.238Z"
   }
 ]
