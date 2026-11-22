@@ -1692,5 +1692,38 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-21T11:25:31.238Z"
+  },
+  {
+    "title": "Pauline (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140291059",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-22T11:41:36.270Z"
+  },
+  {
+    "title": "Haunted (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140435994",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-22T11:41:36.270Z"
+  },
+  {
+    "title": "The Great Blood: Eye for An Eye (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-22T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q142213361",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-22T11:41:36.271Z"
   }
 ]
