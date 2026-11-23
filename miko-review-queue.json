@@ -1725,5 +1725,16 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-22T11:41:36.271Z"
+  },
+  {
+    "title": "Mustung (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-23T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q142221716",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-23T13:14:33.803Z"
   }
 ]
