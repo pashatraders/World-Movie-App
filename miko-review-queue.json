@@ -1736,5 +1736,49 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-23T13:14:33.803Z"
+  },
+  {
+    "title": "Way of the Warrior Kid (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-25T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q129814796",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-25T13:12:38.819Z"
+  },
+  {
+    "title": "Focker-in-Law (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-25T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q135713425",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-25T13:12:38.819Z"
+  },
+  {
+    "title": "A Good Little Soldier (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-25T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140680910",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-25T13:12:38.819Z"
+  },
+  {
+    "title": "Forty Love (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-25T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q140331952",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-25T13:12:38.819Z"
   }
 ]
