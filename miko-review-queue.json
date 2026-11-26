@@ -1780,5 +1780,93 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-25T13:12:38.819Z"
+  },
+  {
+    "title": "Waves (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-26T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q104898525",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-26T12:52:32.124Z"
+  },
+  {
+    "title": "I Am Martin Parr (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-26T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q132732158",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-26T12:52:32.124Z"
+  },
+  {
+    "title": "The Further Mis-Adventures of Cliff Booth (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-26T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q134236545",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-26T12:52:32.125Z"
+  },
+  {
+    "title": "North (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-26T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136412875",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-26T12:52:32.125Z"
+  },
+  {
+    "title": "The Last One for the Road (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-26T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q133862881",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-26T12:52:32.125Z"
+  },
+  {
+    "title": "The Incomer (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-26T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q133163344",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-26T12:52:32.125Z"
+  },
+  {
+    "title": "The Awakening (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-26T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q136087546",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-26T12:52:32.125Z"
+  },
+  {
+    "title": "Brunello: The Gracious Visionary (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-26T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q137357121",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-26T12:52:32.125Z"
   }
 ]
