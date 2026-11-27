@@ -1868,5 +1868,49 @@
     "videoRightsStatus": "NOT_VERIFIED",
     "publicationStatus": "PENDING_HUMAN_REVIEW",
     "discoveredAt": "2026-11-26T12:52:32.125Z"
+  },
+  {
+    "title": "The Editor (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-27T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q138940004",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-27T12:47:15.777Z"
+  },
+  {
+    "title": "Yeh Prem Mol Liya (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-27T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q141539509",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-27T12:47:15.778Z"
+  },
+  {
+    "title": "Everytime (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-27T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q139069280",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-27T12:47:15.778Z"
+  },
+  {
+    "title": "Just an Illusion (2026)",
+    "year": 2026,
+    "releaseDate": "2026-11-26T00:00:00Z",
+    "sourceName": "Wikidata",
+    "sourceUrl": "http://www.wikidata.org/entity/Q138504368",
+    "posterStatus": "NOT_VERIFIED",
+    "videoRightsStatus": "NOT_VERIFIED",
+    "publicationStatus": "PENDING_HUMAN_REVIEW",
+    "discoveredAt": "2026-11-27T12:47:15.778Z"
   }
 ]
